@@ -6,10 +6,11 @@ credentials and known prompt-override phrasings on the way out, forwards the req
 an SSRF-resistant transport, and inspects the response before anything reaches the
 workload, including token-by-token **streaming** responses and tool-call arguments.
 
-> **Status: research prototype.** Verified locally: test suite on Python 3.10–3.14,
-> container build and hardened run, dependency and container scans. It has **not** been
-> exercised against a live LLM provider or in a production cluster, and it has not been
-> independently audited. See [docs/LIMITATIONS.md](docs/LIMITATIONS.md).
+> **Status: research prototype.** Verified in CI on GitHub-hosted Linux runners: test
+> suite on Python 3.10–3.14, static analysis, dependency, secret and container scans,
+> container build and hardened smoke run, Kubernetes manifest schema validation. It has
+> **not** been exercised against a live LLM provider or in a real Kubernetes cluster, and
+> it has not been independently audited. See [docs/LIMITATIONS.md](docs/LIMITATIONS.md).
 
 **Research article:** [Inspecting the Stream: Secret Leakage, Tool Calls and SSRF in LLM Gateways](docs/RESEARCH_ARTICLE.md)
 
@@ -131,8 +132,8 @@ on hardware; they were measured on one Windows workstation.
   covers *detectable* secrets.
 - Replace network egress controls, provider-side safety features or secret management.
 
-It has not been run against a live provider, in a real Kubernetes cluster, or on a hosted
-CI runner. The full list is in [docs/LIMITATIONS.md](docs/LIMITATIONS.md).
+It has not been run against a live provider or in a real Kubernetes cluster. The full list
+is in [docs/LIMITATIONS.md](docs/LIMITATIONS.md).
 
 ## Reporting a vulnerability
 

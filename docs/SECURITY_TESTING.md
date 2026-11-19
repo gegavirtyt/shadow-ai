@@ -51,9 +51,12 @@ not an evaluation; the unbiased evaluation is in `benchmarks/` (BENCHMARK_METHOD
 | Kubernetes | kubeconform 0.6.7 `-strict`; `infra/lint_k8s.py` | 9/9 resources valid; no violations |
 | Secrets | `python scripts/scan_repo_secrets.py` (gateway's pattern detectors) | 0 findings outside allowlisted synthetic fixtures |
 
+These checks also run in the CI workflow on GitHub-hosted Linux runners, together with the
+test suite on Python 3.10–3.14, a container smoke test and a Trivy scan (trivy-action
+v0.36.0, pinned by commit SHA).
+
 ## 4. Not verified
 
 * Live provider traffic (opt-in tests exist, not run: no API key / spend authorisation).
-* GitHub Actions execution: every workflow step was run locally, the workflow itself was not.
 * Behaviour in a real Kubernetes cluster (manifests are schema-validated only).
 * Mutation testing was not run on the final code.

@@ -55,8 +55,9 @@ agents, tool-call authorisation and provider safety features.
 
 ## 6. Verification gaps
 
-* Not exercised against a live provider (opt-in tests exist), in a real cluster, or in
-  GitHub Actions (all workflow steps were run locally).
+* Not exercised against a live provider (opt-in tests exist) or in a real cluster. The CI
+  workflow runs on GitHub-hosted Linux runners (Python 3.10–3.14, container build, smoke
+  test, container scan and manifest schema validation).
 * The base image is tag-pinned, not digest-pinned.
 * Performance measured on one Windows workstation.
 * During development one background run of the streaming evaluation stalled at ~0 CPU

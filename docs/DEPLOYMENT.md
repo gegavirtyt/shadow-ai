@@ -55,8 +55,10 @@ docker run --read-only --cap-drop ALL --security-opt no-new-privileges \
 Verified locally: the image builds from the hash-pinned `requirements.lock`, runs as UID
 10001 with zero effective capabilities on a read-only root filesystem, the Docker
 `HEALTHCHECK` reports healthy, it exits when no credentials are configured, and Trivy
-reports no fixable HIGH/CRITICAL vulnerabilities. For reproducible builds, pin the base
-image by digest in both `FROM` lines.
+reports no fixable HIGH/CRITICAL vulnerabilities. The CI workflow repeats the build, a
+hardened smoke run (read-only root filesystem, all capabilities dropped, UID 10001,
+`/health`) and the Trivy scan on every push to `main` and every pull request. For
+reproducible builds, pin the base image by digest in both `FROM` lines.
 
 Regenerate the lock after changing dependencies:
 `uv pip compile pyproject.toml --python-version 3.12 --python-platform linux --generate-hashes -o requirements.lock`.

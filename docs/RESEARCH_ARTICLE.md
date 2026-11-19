@@ -2,7 +2,7 @@
 
 ### A streaming inspection design with a stated safety argument, evaluated on blind held-out data, with its failures reported alongside its successes
 
-**Code, tests and data:** <https://github.com/gegavirtyt/shadow-ai.git>
+**Code, tests and data:** <https://github.com/gegavirtyt/shadow-ai>
 
 ---
 
@@ -31,8 +31,9 @@ does so. The research question is:
 The contribution has three parts: a streaming inspection design with an explicit release
 rule and safety argument; an evaluation on held-out data the detector was never tuned on;
 and a plain account of what the approach cannot do. The gateway is a research prototype,
-verified locally, not independently audited or peer-reviewed. Every number below comes
-from a script, test or result file in the repository.
+verified locally and in continuous integration, not independently audited or
+peer-reviewed. Every number below comes from a script, test or result file in the
+repository.
 
 ## 2. The security problem and threat model
 
@@ -232,8 +233,10 @@ infrastructure.
 **Tests.** The suite contains 304 passing tests plus 2 live-provider tests that are
 skipped unless explicitly enabled. It spans unit and property tests, integration tests
 against real HTTP servers, transport tests with real sockets and TLS, streaming property
-tests and regression suites, and reaches 90% branch coverage on Python 3.14. Coverage
-measures exercised code, not resistance to attacks nobody wrote a test for.
+tests and regression suites, and reaches 90% branch coverage. It passes locally on
+Windows (Python 3.14) and in continuous integration on GitHub-hosted Linux runners
+(Python 3.10 to 3.14). Coverage measures exercised code, not resistance to attacks
+nobody wrote a test for.
 
 **Corpus.** Detection is evaluated on a synthetic corpus with labels assigned **by
 construction**: a sample is positive if and only if a credential was embedded, never
@@ -356,9 +359,14 @@ before relying on these rates. Performance was measured on one Windows workstati
 concurrency limits apply per replica. Behind an ingress, the
 audited client IP is the ingress address. AWS Bedrock request signing is not supported.
 
-**Not tested.** Live provider traffic; deployment in a real Kubernetes cluster (the
-manifests are schema-validated only); execution of the CI workflow on a hosted runner;
-mutation testing. The test suite has been run on Windows only.
+**Verified in continuous integration.** The CI workflow runs on GitHub-hosted Linux
+runners: the test suite on Python 3.10 to 3.14, static analysis, dependency and secret
+checks, the *heldout2* and streaming evaluations, a container build with a hardened smoke
+test, a container vulnerability scan and schema validation of the Kubernetes manifests.
+
+**Not established.** Live provider traffic; deployment in a real Kubernetes cluster (the
+manifests are schema-validated only); mutation testing; production deployment; an
+independent security audit; peer review.
 
 ## 9. Deployment and reproducibility
 
@@ -371,7 +379,7 @@ between `block` and `log` for entropy detection.
 Everything in this article can be reproduced from the repository. Its README lists the
 commands for the tests, the corpus hash and each evaluation:
 
-**<https://github.com/gegavirtyt/shadow-ai.git>**
+**<https://github.com/gegavirtyt/shadow-ai>**
 
 The methodology, per-category results, threat model and design arguments are in its
 `docs/` directory. All test credentials are synthetic and generated at runtime.
