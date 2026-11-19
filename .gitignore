@@ -1,0 +1,69 @@
+# Python bytecode & caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.hypothesis/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.mutmut-cache
+mutants/
+.tox/
+.nox/
+.cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ipynb_checkpoints/
+
+# Packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+wheels/
+pip-wheel-metadata/
+
+# Environments & secrets (never commit real credentials)
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+env/
+ENV/
+*.pem
+*.key
+workloads.json
+
+# Generated, environment-specific artifacts
+infra/resources.json
+benchmarks/results/*.local.json
+siem_events.jsonl
+*.log
+*.tmp
+*.bak
+*.orig
+tmp/
+temp/
+
+# Local security-scanner reports (may quote matched values)
+*.sarif
+gitleaks*.json
+trufflehog*.json
+trivy*.json
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo

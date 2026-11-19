@@ -1,0 +1,189 @@
+{
+  "environment": {
+    "python": "3.14.4",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+    "logical_cpus": 12,
+    "memory_gib": 15.9,
+    "note": "loopback mock upstream; measures gateway overhead only, not provider latency"
+  },
+  "json": {
+    "512B": {
+      "direct": {
+        "n": 300,
+        "mean_ms": 0.879,
+        "p50_ms": 0.854,
+        "p95_ms": 1.004,
+        "p99_ms": 1.18
+      },
+      "gateway": {
+        "n": 300,
+        "mean_ms": 3.733,
+        "p50_ms": 3.615,
+        "p95_ms": 4.638,
+        "p99_ms": 4.997
+      },
+      "overhead_p50_ms": 2.761,
+      "gateway_cpu_ms_per_request": 2.979
+    },
+    "5120B": {
+      "direct": {
+        "n": 300,
+        "mean_ms": 0.868,
+        "p50_ms": 0.845,
+        "p95_ms": 0.986,
+        "p99_ms": 1.133
+      },
+      "gateway": {
+        "n": 300,
+        "mean_ms": 5.325,
+        "p50_ms": 5.227,
+        "p95_ms": 5.997,
+        "p99_ms": 6.382
+      },
+      "overhead_p50_ms": 4.382,
+      "gateway_cpu_ms_per_request": 4.199
+    },
+    "51200B": {
+      "direct": {
+        "n": 100,
+        "mean_ms": 1.097,
+        "p50_ms": 1.076,
+        "p95_ms": 1.199
+      },
+      "gateway": {
+        "n": 100,
+        "mean_ms": 22.36,
+        "p50_ms": 22.225,
+        "p95_ms": 23.56
+      },
+      "overhead_p50_ms": 21.149,
+      "gateway_cpu_ms_per_request": 20.573
+    },
+    "512000B": {
+      "direct": {
+        "n": 60,
+        "mean_ms": 3.883,
+        "p50_ms": 3.717,
+        "p95_ms": 4.192
+      },
+      "gateway": {
+        "n": 60,
+        "mean_ms": 193.522,
+        "p50_ms": 191.375,
+        "p95_ms": 209.954
+      },
+      "overhead_p50_ms": 187.658,
+      "gateway_cpu_ms_per_request": 189.062
+    }
+  },
+  "streaming": {
+    "100tok_0ms": {
+      "direct_first_token": {
+        "n": 100,
+        "mean_ms": 1.893,
+        "p50_ms": 1.864,
+        "p95_ms": 2.104
+      },
+      "gateway_first_token": {
+        "n": 100,
+        "mean_ms": 5.337,
+        "p50_ms": 5.161,
+        "p95_ms": 6.303
+      },
+      "direct_total": {
+        "n": 100,
+        "mean_ms": 2.862,
+        "p50_ms": 2.825,
+        "p95_ms": 3.074
+      },
+      "gateway_total": {
+        "n": 100,
+        "mean_ms": 14.013,
+        "p50_ms": 13.804,
+        "p95_ms": 15.099
+      },
+      "first_token_overhead_p50_ms": 3.3,
+      "total_overhead_p50_ms": 10.98
+    },
+    "100tok_20ms": {
+      "direct_first_token": {
+        "n": 40,
+        "mean_ms": 3.607,
+        "p50_ms": 4.598,
+        "p95_ms": 4.779
+      },
+      "gateway_first_token": {
+        "n": 40,
+        "mean_ms": 32.749,
+        "p50_ms": 31.335,
+        "p95_ms": 45.555
+      },
+      "direct_total": {
+        "n": 40,
+        "mean_ms": 3205.659,
+        "p50_ms": 3203.829,
+        "p95_ms": 3219.78
+      },
+      "gateway_total": {
+        "n": 40,
+        "mean_ms": 3206.349,
+        "p50_ms": 3205.248,
+        "p95_ms": 3223.675
+      },
+      "first_token_overhead_p50_ms": 26.74,
+      "total_overhead_p50_ms": 1.42
+    }
+  },
+  "concurrency": {
+    "8_workers": {
+      "direct": {
+        "workers": 8,
+        "requests": 2000,
+        "throughput_rps": 1237.5,
+        "n": 2000,
+        "mean_ms": 4.259,
+        "p50_ms": 4.009,
+        "p95_ms": 6.533,
+        "p99_ms": 7.885
+      },
+      "gateway": {
+        "workers": 8,
+        "requests": 2000,
+        "throughput_rps": 235.5,
+        "n": 2000,
+        "mean_ms": 31.116,
+        "p50_ms": 21.41,
+        "p95_ms": 46.161,
+        "p99_ms": 67.519
+      }
+    },
+    "32_workers": {
+      "direct": {
+        "workers": 32,
+        "requests": 1984,
+        "throughput_rps": 776.2,
+        "n": 1984,
+        "mean_ms": 12.911,
+        "p50_ms": 12.424,
+        "p95_ms": 25.369,
+        "p99_ms": 32.497
+      },
+      "gateway": {
+        "workers": 32,
+        "requests": 1984,
+        "throughput_rps": 163.4,
+        "n": 1984,
+        "mean_ms": 161.948,
+        "p50_ms": 125.504,
+        "p95_ms": 401.132,
+        "p99_ms": 602.831
+      }
+    }
+  },
+  "gateway_process": {
+    "rss_start_mib": 60.9,
+    "rss_end_mib": 85.8,
+    "cpu_seconds_total": 46.48
+  }
+}

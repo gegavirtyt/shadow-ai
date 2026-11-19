@@ -1,0 +1,221 @@
+# Shadow AI Defensive Gateway - Kubernetes deployment (namespace: shadow-ai-production).
+#
+# Secrets are NOT defined here. Create them out of band (or via your secret manager /
+# External Secrets operator), e.g.:
+#   kubectl -n shadow-ai-production create secret generic shadow-ai-gateway-secrets \
+#     --from-literal=UPSTREAM_API_KEY='<provider key>' \
+#     --from-file=workloads.json=./workloads.json \
+#     --from-literal=AUDIT_HMAC_KEY="$(openssl rand -hex 32)"
+# workloads.json holds SHA-256 digests of workload keys, never plaintext keys (see DEPLOYMENT.md).
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: shadow-ai-production
+  labels:
+    pod-security.kubernetes.io/enforce: restricted
+    pod-security.kubernetes.io/audit: restricted
+    pod-security.kubernetes.io/warn: restricted
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: shadow-ai-gateway
+  namespace: shadow-ai-production
+automountServiceAccountToken: false
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: shadow-ai-gateway-config
+  namespace: shadow-ai-production
+data:
+  UPSTREAM_LLM_URL: "https://api.openai.com/v1/chat/completions"
+  UPSTREAM_PROVIDER: "openai"
+  ALLOWED_UPSTREAM_HOSTS: "api.openai.com"
+  ALLOWED_MODELS: "gpt-4o-mini"
+  GATEWAY_AUTH_MODE: "required"
+  GATEWAY_WORKLOADS_FILE: "/etc/shadow-ai-gateway/workloads.json"
+  PROMPT_INJECTION_MODE: "block"
+  MAX_REQUEST_BODY_SIZE: "1048576"
+  MAX_RESPONSE_BODY_SIZE: "8388608"
+  MAX_CONCURRENT_REQUESTS: "64"
+  RATE_LIMIT_PER_MINUTE: "120"  # per workload, per replica
+  UPSTREAM_CONNECT_TIMEOUT: "5"
+  UPSTREAM_READ_TIMEOUT: "60"
+  STREAM_MAX_DURATION: "300"
+  GATEWAY_ACCESS_LOG: "true"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shadow-ai-gateway
+  namespace: shadow-ai-production
+  labels:
+    app: shadow-ai-proxy-gateway
+spec:
+  replicas: 2
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: shadow-ai-proxy-gateway
+  template:
+    metadata:
+      labels:
+        app: shadow-ai-proxy-gateway
+    spec:
+      serviceAccountName: shadow-ai-gateway
+      automountServiceAccountToken: false
+      hostNetwork: false
+      hostPID: false
+      hostIPC: false
+      enableServiceLinks: false
+      terminationGracePeriodSeconds: 30
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+        runAsGroup: 10001
+        fsGroup: 10001
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+        - name: gateway
+          image: shadow-ai-gateway:4.0.0  # pin by digest in production
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+          envFrom:
+            - configMapRef:
+                name: shadow-ai-gateway-config
+          env:
+            - name: UPSTREAM_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: shadow-ai-gateway-secrets
+                  key: UPSTREAM_API_KEY
+            - name: AUDIT_HMAC_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: shadow-ai-gateway-secrets
+                  key: AUDIT_HMAC_KEY
+          volumeMounts:
+            - name: workloads
+              mountPath: /etc/shadow-ai-gateway
+              readOnly: true
+          securityContext:
+            allowPrivilegeEscalation: false
+            privileged: false
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+            capabilities:
+              drop:
+                - ALL
+          resources:
+            requests:
+              cpu: "250m"
+              memory: "256Mi"
+            limits:
+              cpu: "1"
+              memory: "512Mi"
+          startupProbe:
+            httpGet:
+              path: /health
+              port: http
+            periodSeconds: 2
+            failureThreshold: 15
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: http
+            periodSeconds: 10
+            timeoutSeconds: 2
+          readinessProbe:
+            httpGet:
+              path: /ready
+              port: http
+            periodSeconds: 5
+            timeoutSeconds: 2
+      volumes:
+        - name: workloads
+          secret:
+            secretName: shadow-ai-gateway-secrets
+            items:
+              - key: workloads.json
+                path: workloads.json
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: shadow-ai-gateway
+  namespace: shadow-ai-production
+spec:
+  type: ClusterIP
+  selector:
+    app: shadow-ai-proxy-gateway
+  ports:
+    - name: http
+      port: 8080
+      targetPort: http
+      protocol: TCP
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: shadow-ai-gateway
+  namespace: shadow-ai-production
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app: shadow-ai-proxy-gateway
+---
+# Gateway network policy: only AI workloads may call it; it may only reach DNS and
+# public HTTPS. RFC 1918, CGNAT, loopback and link-local (cloud metadata) ranges are
+# excluded at the network layer in addition to the gateway's own SSRF controls.
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: shadow-ai-gateway
+  namespace: shadow-ai-production
+spec:
+  podSelector:
+    matchLabels:
+      app: shadow-ai-proxy-gateway
+  policyTypes:
+    - Ingress
+    - Egress
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              app: autonomous-ai-worker
+      ports:
+        - protocol: TCP
+          port: 8080
+  egress:
+    - to:
+        - namespaceSelector:
+            matchLabels:
+              kubernetes.io/metadata.name: kube-system
+          podSelector:
+            matchLabels:
+              k8s-app: kube-dns
+      ports:
+        - protocol: UDP
+          port: 53
+        - protocol: TCP
+          port: 53
+    - to:
+        - ipBlock:
+            cidr: 0.0.0.0/0
+            except:
+              - 10.0.0.0/8
+              - 100.64.0.0/10
+              - 127.0.0.0/8
+              - 169.254.0.0/16
+              - 172.16.0.0/12
+              - 192.168.0.0/16
+      ports:
+        - protocol: TCP
+          port: 443

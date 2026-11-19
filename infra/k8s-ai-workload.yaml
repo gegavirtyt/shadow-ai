@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: autonomous-ai-worker
+  namespace: shadow-ai-production
+  labels:
+    app: autonomous-ai-worker
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: autonomous-ai-worker
+  template:
+    metadata:
+      labels:
+        app: autonomous-ai-worker
+    spec:
+      # CRITICAL SECURITY: hostNetwork MUST be false to enforce IMDSv2 Hop Limit = 1
+      hostNetwork: false
+      hostPID: false
+      hostIPC: false
+      automountServiceAccountToken: false
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+        runAsGroup: 10001
+        fsGroup: 10001
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+        - name: worker
+          image: shadow-ai-worker:3.1.0
+          securityContext:
+            allowPrivilegeEscalation: false
+            privileged: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop:
+                - ALL
+          env:
+            # The gateway is a reverse proxy for the LLM API, not an HTTP CONNECT forward
+            # proxy: point the SDK's base URL at it (HTTP(S)_PROXY would not work).
+            - name: OPENAI_BASE_URL
+              value: "http://shadow-ai-gateway.shadow-ai-production.svc.cluster.local:8080/v1"
+            - name: OPENAI_API_KEY  # the workload's *gateway* credential, not a provider key
+              valueFrom:
+                secretKeyRef:
+                  name: autonomous-ai-worker-gateway-key
+                  key: key
+          resources:
+            limits:
+              cpu: "1000m"
+              memory: "1Gi"
+            requests:
+              cpu: "250m"
+              memory: "512Mi"

@@ -1,0 +1,109 @@
+[build-system]
+requires = ["setuptools>=69.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shadow-ai-governance-defense"
+version = "4.0.0"
+description = "Bi-directional inspection gateway for LLM API traffic: secret DLP, streaming egress inspection and SSRF-resistant forwarding."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+authors = [{ name = "Cloud Security Research Group" }]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Information Technology",
+    "Topic :: Security",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
+# Runtime dependencies only. Exact, hash-pinned versions for container builds live in
+# requirements.lock (generated from this file; see CONTRIBUTING.md).
+dependencies = [
+    "fastapi>=0.110,<1.0",
+    "uvicorn>=0.28,<1.0",
+    "httpx>=0.27,<0.29",
+    "httpcore>=1.0.4,<2.0",
+    "anyio>=4.0,<5.0",
+    "certifi>=2024.2.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.1,<10",
+    "pytest-cov>=5.0",
+    "hypothesis>=6.100",
+    "trustme>=1.1",
+    "requests>=2.31,<3",
+    "ruff>=0.6",
+    "mypy>=1.10",
+    "bandit>=1.7.8",
+    "pip-audit>=2.7",
+    "psutil>=5.9",  # benchmarks only
+]
+
+[project.scripts]
+shadow-ai-gateway = "shadow_ai_gateway.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["shadow_ai_gateway*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-ra --strict-markers"
+markers = [
+    "live_openai: requires a real OpenAI API key and explicit spend authorisation (skipped by default)",
+]
+filterwarnings = ["ignore::DeprecationWarning:starlette.testclient"]
+
+[tool.coverage.run]
+source = ["src/shadow_ai_gateway"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+exclude_also = ["if TYPE_CHECKING:", "pragma: no cover", "raise AssertionError"]
+
+[tool.ruff]
+line-length = 130
+target-version = "py310"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "S", "BLE", "RUF", "ASYNC", "PL"]
+ignore = [
+    "PLR0911", "PLR0912", "PLR0913", "PLR0915", "PLR2004",  # complexity heuristics; reviewed manually
+    "RUF001", "RUF002", "RUF003",  # intentional Unicode in detection docs/tests
+    "S101",  # asserts are used for internal invariants and in tests
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S", "PL", "B", "BLE", "RUF", "E501", "E402", "E741", "ASYNC"]
+"benchmarks/**" = ["S", "PL", "BLE", "E501", "E402", "RUF"]
+"scripts/**" = ["S", "PL", "BLE", "E501", "E402", "RUF"]
+"infra/**" = ["S", "PL", "E501"]
+"src/proxy_gateway.py" = ["E402"]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.mypy]
+python_version = "3.10"
+files = ["src/shadow_ai_gateway"]
+strict = true
+warn_unreachable = true
+pretty = true
+
+[[tool.mypy.overrides]]
+module = ["trustme.*", "hypothesis.*"]
+ignore_missing_imports = true
+
+[tool.bandit]
+exclude_dirs = ["tests", "benchmarks", ".venv"]

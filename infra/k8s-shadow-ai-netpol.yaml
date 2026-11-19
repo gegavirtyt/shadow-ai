@@ -1,0 +1,44 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: isolate-shadow-ai-workload
+  namespace: shadow-ai-production
+  labels:
+    app.kubernetes.io/name: shadow-ai-governance
+    app.kubernetes.io/part-of: shadow-ai-security-lab
+spec:
+  podSelector:
+    matchLabels:
+      app: autonomous-ai-worker
+  policyTypes:
+    - Ingress
+    - Egress
+  # Default-Deny Ingress: Empty list means no inbound connections are allowed to worker pods.
+  ingress: []
+  # Egress Allowlist: In Kubernetes, NetworkPolicies are additive allowlists.
+  # Selecting the pod and specifying Egress in policyTypes isolates outbound traffic:
+  # only traffic matching the rules below is permitted. All other destinations
+  # (including link-local IMDS 169.254.169.254 and public internet) are blocked by omission,
+  # provided no other NetworkPolicy adds an allow rule for these pods.
+  egress:
+    # 1. Allow cluster DNS queries strictly to CoreDNS/kube-dns in the kube-system namespace
+    - to:
+        - namespaceSelector:
+            matchLabels:
+              kubernetes.io/metadata.name: kube-system
+          podSelector:
+            matchLabels:
+              k8s-app: kube-dns
+      ports:
+        - protocol: UDP
+          port: 53
+        - protocol: TCP
+          port: 53
+    # 2. Allow outbound HTTP traffic strictly to the defensive proxy gateway in the same namespace
+    - to:
+        - podSelector:
+            matchLabels:
+              app: shadow-ai-proxy-gateway
+      ports:
+        - protocol: TCP
+          port: 8080

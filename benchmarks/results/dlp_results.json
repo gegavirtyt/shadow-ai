@@ -1,0 +1,6347 @@
+{
+  "generated_unix": 1795043800,
+  "environment": {
+    "python": "3.14.4",
+    "platform": "Windows-11-10.0.26300-SP0"
+  },
+  "corpus_manifest_sha256": "2dcf96f64de05ca71046a70a98b5aa04c281bd14a78bacdcc8834220a310f79a",
+  "results": {
+    "development/v4.0.0": {
+      "n": 1260,
+      "positives": 660,
+      "negatives": 600,
+      "tp": 626,
+      "fp": 0,
+      "tn": 600,
+      "fn": 34,
+      "precision": 1.0,
+      "precision_ci95": [
+        0.9939,
+        1.0
+      ],
+      "recall": 0.9485,
+      "recall_ci95": [
+        0.9289,
+        0.9629
+      ],
+      "f1": 0.9736,
+      "specificity": 1.0,
+      "specificity_ci95": [
+        0.9936,
+        1.0
+      ],
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0515,
+      "mean_scan_ms": 0.0711,
+      "per_category": {
+        "anthropic_api_key": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "aws_access_key_id": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "aws_arn": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "aws_secret_access_key_ctx": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "aws_session_token": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "bare_random_base62": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 28,
+          "recall": 0.9333,
+          "ci95": [
+            0.7868,
+            0.9815
+          ]
+        },
+        "bare_random_base64_40": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 28,
+          "recall": 0.9333,
+          "ci95": [
+            0.7868,
+            0.9815
+          ]
+        },
+        "bare_random_hex": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 0,
+          "recall": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "base64_english_text": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "code_without_secret": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "container_image_digest": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "database_url": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "gcp_service_account_json": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "github_classic_token": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "github_fine_grained_pat": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "gitlab_pat": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "google_api_key": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "keyword_generic_secret": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "keyword_hex_secret": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "labelled_request_id": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "long_identifier": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "md5_digest": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "obfuscated_provider_token": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "openai_api_key": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "password_assignment": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "pem_private_key": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "pem_public_material": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "placeholder_assignment": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "placeholder_database_url": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "prose": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "sha1_git_commit": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "sha256_hex_digest": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "slack_bot_token": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "slack_webhook": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "sri_integrity_hash": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "ssh_public_key": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "stripe_publishable_key": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "stripe_secret_key": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "ulid": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "url_with_path": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "uuid": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "version_and_numbers": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        }
+      },
+      "errors": {
+        "false_negatives": [
+          "DEV-bare_random_base62-015",
+          "DEV-bare_random_base62-026",
+          "DEV-bare_random_base64_40-001",
+          "DEV-bare_random_base64_40-013",
+          "DEV-bare_random_hex-000",
+          "DEV-bare_random_hex-001",
+          "DEV-bare_random_hex-002",
+          "DEV-bare_random_hex-003",
+          "DEV-bare_random_hex-004",
+          "DEV-bare_random_hex-005",
+          "DEV-bare_random_hex-006",
+          "DEV-bare_random_hex-007",
+          "DEV-bare_random_hex-008",
+          "DEV-bare_random_hex-009",
+          "DEV-bare_random_hex-010",
+          "DEV-bare_random_hex-011",
+          "DEV-bare_random_hex-012",
+          "DEV-bare_random_hex-013",
+          "DEV-bare_random_hex-014",
+          "DEV-bare_random_hex-015",
+          "DEV-bare_random_hex-016",
+          "DEV-bare_random_hex-017",
+          "DEV-bare_random_hex-018",
+          "DEV-bare_random_hex-019",
+          "DEV-bare_random_hex-020",
+          "DEV-bare_random_hex-021",
+          "DEV-bare_random_hex-022",
+          "DEV-bare_random_hex-023",
+          "DEV-bare_random_hex-024",
+          "DEV-bare_random_hex-025",
+          "DEV-bare_random_hex-026",
+          "DEV-bare_random_hex-027",
+          "DEV-bare_random_hex-028",
+          "DEV-bare_random_hex-029"
+        ],
+        "false_positives": []
+      }
+    },
+    "development/v3.2.0": {
+      "n": 1260,
+      "positives": 660,
+      "negatives": 600,
+      "tp": 507,
+      "fp": 189,
+      "tn": 411,
+      "fn": 153,
+      "precision": 0.7284,
+      "precision_ci95": [
+        0.6942,
+        0.7602
+      ],
+      "recall": 0.7682,
+      "recall_ci95": [
+        0.7345,
+        0.7988
+      ],
+      "f1": 0.7478,
+      "specificity": 0.685,
+      "specificity_ci95": [
+        0.6468,
+        0.7209
+      ],
+      "false_positive_rate": 0.315,
+      "false_negative_rate": 0.2318,
+      "mean_scan_ms": 0.0569,
+      "per_category": {
+        "anthropic_api_key": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "aws_access_key_id": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "aws_arn": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "aws_secret_access_key_ctx": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "aws_session_token": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "bare_random_base62": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 23,
+          "recall": 0.7667,
+          "ci95": [
+            0.5907,
+            0.8821
+          ]
+        },
+        "bare_random_base64_40": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 29,
+          "recall": 0.9667,
+          "ci95": [
+            0.8333,
+            0.9941
+          ]
+        },
+        "bare_random_hex": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 0,
+          "recall": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "base64_english_text": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 30,
+          "false_positive_rate": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "code_without_secret": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "container_image_digest": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "database_url": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 23,
+          "recall": 0.7667,
+          "ci95": [
+            0.5907,
+            0.8821
+          ]
+        },
+        "gcp_service_account_json": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 0,
+          "recall": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "github_classic_token": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "github_fine_grained_pat": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "gitlab_pat": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 3,
+          "recall": 0.1,
+          "ci95": [
+            0.0346,
+            0.2562
+          ]
+        },
+        "google_api_key": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "keyword_generic_secret": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 27,
+          "recall": 0.9,
+          "ci95": [
+            0.7438,
+            0.9654
+          ]
+        },
+        "keyword_hex_secret": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 20,
+          "recall": 0.6667,
+          "ci95": [
+            0.4878,
+            0.8077
+          ]
+        },
+        "labelled_request_id": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 27,
+          "false_positive_rate": 0.9,
+          "ci95": [
+            0.7438,
+            0.9654
+          ]
+        },
+        "long_identifier": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "md5_digest": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "obfuscated_provider_token": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 22,
+          "recall": 0.7333,
+          "ci95": [
+            0.5555,
+            0.8582
+          ]
+        },
+        "openai_api_key": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "password_assignment": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 0,
+          "recall": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "pem_private_key": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "pem_public_material": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 12,
+          "false_positive_rate": 0.4,
+          "ci95": [
+            0.2459,
+            0.5768
+          ]
+        },
+        "placeholder_assignment": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "placeholder_database_url": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 30,
+          "false_positive_rate": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "prose": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "sha1_git_commit": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "sha256_hex_digest": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "slack_bot_token": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "slack_webhook": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "sri_integrity_hash": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 30,
+          "false_positive_rate": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "ssh_public_key": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 30,
+          "false_positive_rate": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "stripe_publishable_key": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 30,
+          "false_positive_rate": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "stripe_secret_key": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "ulid": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "url_with_path": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "uuid": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "version_and_numbers": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        }
+      },
+      "errors": {
+        "false_negatives": [
+          "DEV-bare_random_base62-002",
+          "DEV-bare_random_base62-003",
+          "DEV-bare_random_base62-011",
+          "DEV-bare_random_base62-015",
+          "DEV-bare_random_base62-024",
+          "DEV-bare_random_base62-025",
+          "DEV-bare_random_base62-026",
+          "DEV-bare_random_base64_40-001",
+          "DEV-bare_random_hex-000",
+          "DEV-bare_random_hex-001",
+          "DEV-bare_random_hex-002",
+          "DEV-bare_random_hex-003",
+          "DEV-bare_random_hex-004",
+          "DEV-bare_random_hex-005",
+          "DEV-bare_random_hex-006",
+          "DEV-bare_random_hex-007",
+          "DEV-bare_random_hex-008",
+          "DEV-bare_random_hex-009",
+          "DEV-bare_random_hex-010",
+          "DEV-bare_random_hex-011",
+          "DEV-bare_random_hex-012",
+          "DEV-bare_random_hex-013",
+          "DEV-bare_random_hex-014",
+          "DEV-bare_random_hex-015",
+          "DEV-bare_random_hex-016",
+          "DEV-bare_random_hex-017",
+          "DEV-bare_random_hex-018",
+          "DEV-bare_random_hex-019",
+          "DEV-bare_random_hex-020",
+          "DEV-bare_random_hex-021",
+          "DEV-bare_random_hex-022",
+          "DEV-bare_random_hex-023",
+          "DEV-bare_random_hex-024",
+          "DEV-bare_random_hex-025",
+          "DEV-bare_random_hex-026",
+          "DEV-bare_random_hex-027",
+          "DEV-bare_random_hex-028",
+          "DEV-bare_random_hex-029",
+          "DEV-database_url-004",
+          "DEV-database_url-006",
+          "DEV-database_url-007",
+          "DEV-database_url-009",
+          "DEV-database_url-010",
+          "DEV-database_url-012",
+          "DEV-database_url-024",
+          "DEV-gcp_service_account_json-000",
+          "DEV-gcp_service_account_json-001",
+          "DEV-gcp_service_account_json-002",
+          "DEV-gcp_service_account_json-003",
+          "DEV-gcp_service_account_json-004",
+          "DEV-gcp_service_account_json-005",
+          "DEV-gcp_service_account_json-006",
+          "DEV-gcp_service_account_json-007",
+          "DEV-gcp_service_account_json-008",
+          "DEV-gcp_service_account_json-009",
+          "DEV-gcp_service_account_json-010",
+          "DEV-gcp_service_account_json-011",
+          "DEV-gcp_service_account_json-012",
+          "DEV-gcp_service_account_json-013",
+          "DEV-gcp_service_account_json-014",
+          "DEV-gcp_service_account_json-015",
+          "DEV-gcp_service_account_json-016",
+          "DEV-gcp_service_account_json-017",
+          "DEV-gcp_service_account_json-018",
+          "DEV-gcp_service_account_json-019",
+          "DEV-gcp_service_account_json-020",
+          "DEV-gcp_service_account_json-021",
+          "DEV-gcp_service_account_json-022",
+          "DEV-gcp_service_account_json-023",
+          "DEV-gcp_service_account_json-024",
+          "DEV-gcp_service_account_json-025",
+          "DEV-gcp_service_account_json-026",
+          "DEV-gcp_service_account_json-027",
+          "DEV-gcp_service_account_json-028",
+          "DEV-gcp_service_account_json-029",
+          "DEV-gitlab_pat-000",
+          "DEV-gitlab_pat-001",
+          "DEV-gitlab_pat-002",
+          "DEV-gitlab_pat-003",
+          "DEV-gitlab_pat-004",
+          "DEV-gitlab_pat-005",
+          "DEV-gitlab_pat-006",
+          "DEV-gitlab_pat-007",
+          "DEV-gitlab_pat-008",
+          "DEV-gitlab_pat-009",
+          "DEV-gitlab_pat-010",
+          "DEV-gitlab_pat-011",
+          "DEV-gitlab_pat-012",
+          "DEV-gitlab_pat-013",
+          "DEV-gitlab_pat-015",
+          "DEV-gitlab_pat-016",
+          "DEV-gitlab_pat-017",
+          "DEV-gitlab_pat-018",
+          "DEV-gitlab_pat-019",
+          "DEV-gitlab_pat-020",
+          "DEV-gitlab_pat-021",
+          "DEV-gitlab_pat-022",
+          "DEV-gitlab_pat-023",
+          "DEV-gitlab_pat-025",
+          "DEV-gitlab_pat-026",
+          "DEV-gitlab_pat-027",
+          "DEV-gitlab_pat-029",
+          "DEV-keyword_generic_secret-004",
+          "DEV-keyword_generic_secret-005",
+          "DEV-keyword_generic_secret-025",
+          "DEV-keyword_hex_secret-004",
+          "DEV-keyword_hex_secret-006",
+          "DEV-keyword_hex_secret-007",
+          "DEV-keyword_hex_secret-010",
+          "DEV-keyword_hex_secret-011",
+          "DEV-keyword_hex_secret-014",
+          "DEV-keyword_hex_secret-018",
+          "DEV-keyword_hex_secret-020",
+          "DEV-keyword_hex_secret-025",
+          "DEV-keyword_hex_secret-028",
+          "DEV-obfuscated_provider_token-010",
+          "DEV-obfuscated_provider_token-011",
+          "DEV-obfuscated_provider_token-015",
+          "DEV-obfuscated_provider_token-022",
+          "DEV-obfuscated_provider_token-023",
+          "DEV-obfuscated_provider_token-025",
+          "DEV-obfuscated_provider_token-027",
+          "DEV-obfuscated_provider_token-029",
+          "DEV-password_assignment-000",
+          "DEV-password_assignment-001",
+          "DEV-password_assignment-002",
+          "DEV-password_assignment-003",
+          "DEV-password_assignment-004",
+          "DEV-password_assignment-005",
+          "DEV-password_assignment-006",
+          "DEV-password_assignment-007",
+          "DEV-password_assignment-008",
+          "DEV-password_assignment-009",
+          "DEV-password_assignment-010",
+          "DEV-password_assignment-011",
+          "DEV-password_assignment-012",
+          "DEV-password_assignment-013",
+          "DEV-password_assignment-014",
+          "DEV-password_assignment-015",
+          "DEV-password_assignment-016",
+          "DEV-password_assignment-017",
+          "DEV-password_assignment-018",
+          "DEV-password_assignment-019",
+          "DEV-password_assignment-020",
+          "DEV-password_assignment-021",
+          "DEV-password_assignment-022",
+          "DEV-password_assignment-023",
+          "DEV-password_assignment-024",
+          "DEV-password_assignment-025",
+          "DEV-password_assignment-026",
+          "DEV-password_assignment-027",
+          "DEV-password_assignment-028",
+          "DEV-password_assignment-029"
+        ],
+        "false_positives": [
+          "DEV-base64_english_text-000",
+          "DEV-base64_english_text-001",
+          "DEV-base64_english_text-002",
+          "DEV-base64_english_text-003",
+          "DEV-base64_english_text-004",
+          "DEV-base64_english_text-005",
+          "DEV-base64_english_text-006",
+          "DEV-base64_english_text-007",
+          "DEV-base64_english_text-008",
+          "DEV-base64_english_text-009",
+          "DEV-base64_english_text-010",
+          "DEV-base64_english_text-011",
+          "DEV-base64_english_text-012",
+          "DEV-base64_english_text-013",
+          "DEV-base64_english_text-014",
+          "DEV-base64_english_text-015",
+          "DEV-base64_english_text-016",
+          "DEV-base64_english_text-017",
+          "DEV-base64_english_text-018",
+          "DEV-base64_english_text-019",
+          "DEV-base64_english_text-020",
+          "DEV-base64_english_text-021",
+          "DEV-base64_english_text-022",
+          "DEV-base64_english_text-023",
+          "DEV-base64_english_text-024",
+          "DEV-base64_english_text-025",
+          "DEV-base64_english_text-026",
+          "DEV-base64_english_text-027",
+          "DEV-base64_english_text-028",
+          "DEV-base64_english_text-029",
+          "DEV-labelled_request_id-000",
+          "DEV-labelled_request_id-001",
+          "DEV-labelled_request_id-002",
+          "DEV-labelled_request_id-003",
+          "DEV-labelled_request_id-004",
+          "DEV-labelled_request_id-005",
+          "DEV-labelled_request_id-006",
+          "DEV-labelled_request_id-007",
+          "DEV-labelled_request_id-008",
+          "DEV-labelled_request_id-009",
+          "DEV-labelled_request_id-010",
+          "DEV-labelled_request_id-011",
+          "DEV-labelled_request_id-012",
+          "DEV-labelled_request_id-013",
+          "DEV-labelled_request_id-014",
+          "DEV-labelled_request_id-016",
+          "DEV-labelled_request_id-017",
+          "DEV-labelled_request_id-018",
+          "DEV-labelled_request_id-020",
+          "DEV-labelled_request_id-021",
+          "DEV-labelled_request_id-022",
+          "DEV-labelled_request_id-023",
+          "DEV-labelled_request_id-024",
+          "DEV-labelled_request_id-025",
+          "DEV-labelled_request_id-027",
+          "DEV-labelled_request_id-028",
+          "DEV-labelled_request_id-029",
+          "DEV-pem_public_material-003",
+          "DEV-pem_public_material-004",
+          "DEV-pem_public_material-011",
+          "DEV-pem_public_material-015",
+          "DEV-pem_public_material-016",
+          "DEV-pem_public_material-017",
+          "DEV-pem_public_material-019",
+          "DEV-pem_public_material-020",
+          "DEV-pem_public_material-022",
+          "DEV-pem_public_material-023",
+          "DEV-pem_public_material-027",
+          "DEV-pem_public_material-029",
+          "DEV-placeholder_database_url-000",
+          "DEV-placeholder_database_url-001",
+          "DEV-placeholder_database_url-002",
+          "DEV-placeholder_database_url-003",
+          "DEV-placeholder_database_url-004",
+          "DEV-placeholder_database_url-005",
+          "DEV-placeholder_database_url-006",
+          "DEV-placeholder_database_url-007",
+          "DEV-placeholder_database_url-008",
+          "DEV-placeholder_database_url-009",
+          "DEV-placeholder_database_url-010",
+          "DEV-placeholder_database_url-011",
+          "DEV-placeholder_database_url-012",
+          "DEV-placeholder_database_url-013",
+          "DEV-placeholder_database_url-014",
+          "DEV-placeholder_database_url-015",
+          "DEV-placeholder_database_url-016",
+          "DEV-placeholder_database_url-017",
+          "DEV-placeholder_database_url-018",
+          "DEV-placeholder_database_url-019",
+          "DEV-placeholder_database_url-020",
+          "DEV-placeholder_database_url-021",
+          "DEV-placeholder_database_url-022",
+          "DEV-placeholder_database_url-023",
+          "DEV-placeholder_database_url-024",
+          "DEV-placeholder_database_url-025",
+          "DEV-placeholder_database_url-026",
+          "DEV-placeholder_database_url-027",
+          "DEV-placeholder_database_url-028",
+          "DEV-placeholder_database_url-029",
+          "DEV-sri_integrity_hash-000",
+          "DEV-sri_integrity_hash-001",
+          "DEV-sri_integrity_hash-002",
+          "DEV-sri_integrity_hash-003",
+          "DEV-sri_integrity_hash-004",
+          "DEV-sri_integrity_hash-005",
+          "DEV-sri_integrity_hash-006",
+          "DEV-sri_integrity_hash-007",
+          "DEV-sri_integrity_hash-008",
+          "DEV-sri_integrity_hash-009",
+          "DEV-sri_integrity_hash-010",
+          "DEV-sri_integrity_hash-011",
+          "DEV-sri_integrity_hash-012",
+          "DEV-sri_integrity_hash-013",
+          "DEV-sri_integrity_hash-014",
+          "DEV-sri_integrity_hash-015",
+          "DEV-sri_integrity_hash-016",
+          "DEV-sri_integrity_hash-017",
+          "DEV-sri_integrity_hash-018",
+          "DEV-sri_integrity_hash-019",
+          "DEV-sri_integrity_hash-020",
+          "DEV-sri_integrity_hash-021",
+          "DEV-sri_integrity_hash-022",
+          "DEV-sri_integrity_hash-023",
+          "DEV-sri_integrity_hash-024",
+          "DEV-sri_integrity_hash-025",
+          "DEV-sri_integrity_hash-026",
+          "DEV-sri_integrity_hash-027",
+          "DEV-sri_integrity_hash-028",
+          "DEV-sri_integrity_hash-029",
+          "DEV-ssh_public_key-000",
+          "DEV-ssh_public_key-001",
+          "DEV-ssh_public_key-002",
+          "DEV-ssh_public_key-003",
+          "DEV-ssh_public_key-004",
+          "DEV-ssh_public_key-005",
+          "DEV-ssh_public_key-006",
+          "DEV-ssh_public_key-007",
+          "DEV-ssh_public_key-008",
+          "DEV-ssh_public_key-009",
+          "DEV-ssh_public_key-010",
+          "DEV-ssh_public_key-011",
+          "DEV-ssh_public_key-012",
+          "DEV-ssh_public_key-013",
+          "DEV-ssh_public_key-014",
+          "DEV-ssh_public_key-015",
+          "DEV-ssh_public_key-016",
+          "DEV-ssh_public_key-017",
+          "DEV-ssh_public_key-018",
+          "DEV-ssh_public_key-019",
+          "DEV-ssh_public_key-020",
+          "DEV-ssh_public_key-021",
+          "DEV-ssh_public_key-022",
+          "DEV-ssh_public_key-023",
+          "DEV-ssh_public_key-024",
+          "DEV-ssh_public_key-025",
+          "DEV-ssh_public_key-026",
+          "DEV-ssh_public_key-027",
+          "DEV-ssh_public_key-028",
+          "DEV-ssh_public_key-029",
+          "DEV-stripe_publishable_key-000",
+          "DEV-stripe_publishable_key-001",
+          "DEV-stripe_publishable_key-002",
+          "DEV-stripe_publishable_key-003",
+          "DEV-stripe_publishable_key-004",
+          "DEV-stripe_publishable_key-005",
+          "DEV-stripe_publishable_key-006",
+          "DEV-stripe_publishable_key-007",
+          "DEV-stripe_publishable_key-008",
+          "DEV-stripe_publishable_key-009",
+          "DEV-stripe_publishable_key-010",
+          "DEV-stripe_publishable_key-011",
+          "DEV-stripe_publishable_key-012",
+          "DEV-stripe_publishable_key-013",
+          "DEV-stripe_publishable_key-014",
+          "DEV-stripe_publishable_key-015",
+          "DEV-stripe_publishable_key-016",
+          "DEV-stripe_publishable_key-017",
+          "DEV-stripe_publishable_key-018",
+          "DEV-stripe_publishable_key-019",
+          "DEV-stripe_publishable_key-020",
+          "DEV-stripe_publishable_key-021",
+          "DEV-stripe_publishable_key-022",
+          "DEV-stripe_publishable_key-023",
+          "DEV-stripe_publishable_key-024",
+          "DEV-stripe_publishable_key-025",
+          "DEV-stripe_publishable_key-026",
+          "DEV-stripe_publishable_key-027",
+          "DEV-stripe_publishable_key-028",
+          "DEV-stripe_publishable_key-029"
+        ]
+      }
+    },
+    "calibration/v4.0.0": {
+      "n": 1260,
+      "positives": 660,
+      "negatives": 600,
+      "tp": 630,
+      "fp": 0,
+      "tn": 600,
+      "fn": 30,
+      "precision": 1.0,
+      "precision_ci95": [
+        0.9939,
+        1.0
+      ],
+      "recall": 0.9545,
+      "recall_ci95": [
+        0.9359,
+        0.968
+      ],
+      "f1": 0.9767,
+      "specificity": 1.0,
+      "specificity_ci95": [
+        0.9936,
+        1.0
+      ],
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0455,
+      "mean_scan_ms": 0.0701,
+      "per_category": {
+        "anthropic_api_key": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "aws_access_key_id": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "aws_arn": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "aws_secret_access_key_ctx": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "aws_session_token": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "bare_random_base62": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "bare_random_base64_40": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "bare_random_hex": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 0,
+          "recall": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "base64_english_text": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "code_without_secret": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "container_image_digest": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "database_url": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "gcp_service_account_json": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "github_classic_token": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "github_fine_grained_pat": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "gitlab_pat": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "google_api_key": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "keyword_generic_secret": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "keyword_hex_secret": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "labelled_request_id": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "long_identifier": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "md5_digest": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "obfuscated_provider_token": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "openai_api_key": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "password_assignment": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "pem_private_key": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "pem_public_material": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "placeholder_assignment": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "placeholder_database_url": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "prose": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "sha1_git_commit": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "sha256_hex_digest": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "slack_bot_token": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "slack_webhook": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "sri_integrity_hash": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "ssh_public_key": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "stripe_publishable_key": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "stripe_secret_key": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "ulid": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "url_with_path": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "uuid": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "version_and_numbers": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        }
+      },
+      "errors": {
+        "false_negatives": [
+          "CAL-bare_random_hex-000",
+          "CAL-bare_random_hex-001",
+          "CAL-bare_random_hex-002",
+          "CAL-bare_random_hex-003",
+          "CAL-bare_random_hex-004",
+          "CAL-bare_random_hex-005",
+          "CAL-bare_random_hex-006",
+          "CAL-bare_random_hex-007",
+          "CAL-bare_random_hex-008",
+          "CAL-bare_random_hex-009",
+          "CAL-bare_random_hex-010",
+          "CAL-bare_random_hex-011",
+          "CAL-bare_random_hex-012",
+          "CAL-bare_random_hex-013",
+          "CAL-bare_random_hex-014",
+          "CAL-bare_random_hex-015",
+          "CAL-bare_random_hex-016",
+          "CAL-bare_random_hex-017",
+          "CAL-bare_random_hex-018",
+          "CAL-bare_random_hex-019",
+          "CAL-bare_random_hex-020",
+          "CAL-bare_random_hex-021",
+          "CAL-bare_random_hex-022",
+          "CAL-bare_random_hex-023",
+          "CAL-bare_random_hex-024",
+          "CAL-bare_random_hex-025",
+          "CAL-bare_random_hex-026",
+          "CAL-bare_random_hex-027",
+          "CAL-bare_random_hex-028",
+          "CAL-bare_random_hex-029"
+        ],
+        "false_positives": []
+      }
+    },
+    "calibration/v3.2.0": {
+      "n": 1260,
+      "positives": 660,
+      "negatives": 600,
+      "tp": 515,
+      "fp": 196,
+      "tn": 404,
+      "fn": 145,
+      "precision": 0.7243,
+      "precision_ci95": [
+        0.6903,
+        0.7559
+      ],
+      "recall": 0.7803,
+      "recall_ci95": [
+        0.7471,
+        0.8102
+      ],
+      "f1": 0.7513,
+      "specificity": 0.6733,
+      "specificity_ci95": [
+        0.6348,
+        0.7097
+      ],
+      "false_positive_rate": 0.3267,
+      "false_negative_rate": 0.2197,
+      "mean_scan_ms": 0.0756,
+      "per_category": {
+        "anthropic_api_key": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "aws_access_key_id": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "aws_arn": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "aws_secret_access_key_ctx": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 29,
+          "recall": 0.9667,
+          "ci95": [
+            0.8333,
+            0.9941
+          ]
+        },
+        "aws_session_token": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "bare_random_base62": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 25,
+          "recall": 0.8333,
+          "ci95": [
+            0.6644,
+            0.9266
+          ]
+        },
+        "bare_random_base64_40": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "bare_random_hex": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 0,
+          "recall": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "base64_english_text": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 30,
+          "false_positive_rate": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "code_without_secret": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "container_image_digest": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "database_url": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 22,
+          "recall": 0.7333,
+          "ci95": [
+            0.5555,
+            0.8582
+          ]
+        },
+        "gcp_service_account_json": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 0,
+          "recall": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "github_classic_token": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "github_fine_grained_pat": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "gitlab_pat": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 10,
+          "recall": 0.3333,
+          "ci95": [
+            0.1923,
+            0.5122
+          ]
+        },
+        "google_api_key": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "keyword_generic_secret": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 29,
+          "recall": 0.9667,
+          "ci95": [
+            0.8333,
+            0.9941
+          ]
+        },
+        "keyword_hex_secret": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 18,
+          "recall": 0.6,
+          "ci95": [
+            0.4232,
+            0.7541
+          ]
+        },
+        "labelled_request_id": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 29,
+          "false_positive_rate": 0.9667,
+          "ci95": [
+            0.8333,
+            0.9941
+          ]
+        },
+        "long_identifier": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "md5_digest": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "obfuscated_provider_token": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 22,
+          "recall": 0.7333,
+          "ci95": [
+            0.5555,
+            0.8582
+          ]
+        },
+        "openai_api_key": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "password_assignment": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 0,
+          "recall": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "pem_private_key": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "pem_public_material": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 17,
+          "false_positive_rate": 0.5667,
+          "ci95": [
+            0.392,
+            0.7262
+          ]
+        },
+        "placeholder_assignment": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "placeholder_database_url": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 30,
+          "false_positive_rate": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "prose": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "sha1_git_commit": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "sha256_hex_digest": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "slack_bot_token": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "slack_webhook": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "sri_integrity_hash": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 30,
+          "false_positive_rate": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "ssh_public_key": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 30,
+          "false_positive_rate": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "stripe_publishable_key": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 30,
+          "false_positive_rate": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "stripe_secret_key": {
+          "label": "credential",
+          "n": 30,
+          "flagged": 30,
+          "recall": 1.0,
+          "ci95": [
+            0.8865,
+            1.0
+          ]
+        },
+        "ulid": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "url_with_path": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "uuid": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        },
+        "version_and_numbers": {
+          "label": "benign",
+          "n": 30,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1135
+          ]
+        }
+      },
+      "errors": {
+        "false_negatives": [
+          "CAL-aws_secret_access_key_ctx-027",
+          "CAL-bare_random_base62-008",
+          "CAL-bare_random_base62-010",
+          "CAL-bare_random_base62-015",
+          "CAL-bare_random_base62-022",
+          "CAL-bare_random_base62-023",
+          "CAL-bare_random_hex-000",
+          "CAL-bare_random_hex-001",
+          "CAL-bare_random_hex-002",
+          "CAL-bare_random_hex-003",
+          "CAL-bare_random_hex-004",
+          "CAL-bare_random_hex-005",
+          "CAL-bare_random_hex-006",
+          "CAL-bare_random_hex-007",
+          "CAL-bare_random_hex-008",
+          "CAL-bare_random_hex-009",
+          "CAL-bare_random_hex-010",
+          "CAL-bare_random_hex-011",
+          "CAL-bare_random_hex-012",
+          "CAL-bare_random_hex-013",
+          "CAL-bare_random_hex-014",
+          "CAL-bare_random_hex-015",
+          "CAL-bare_random_hex-016",
+          "CAL-bare_random_hex-017",
+          "CAL-bare_random_hex-018",
+          "CAL-bare_random_hex-019",
+          "CAL-bare_random_hex-020",
+          "CAL-bare_random_hex-021",
+          "CAL-bare_random_hex-022",
+          "CAL-bare_random_hex-023",
+          "CAL-bare_random_hex-024",
+          "CAL-bare_random_hex-025",
+          "CAL-bare_random_hex-026",
+          "CAL-bare_random_hex-027",
+          "CAL-bare_random_hex-028",
+          "CAL-bare_random_hex-029",
+          "CAL-database_url-001",
+          "CAL-database_url-005",
+          "CAL-database_url-008",
+          "CAL-database_url-011",
+          "CAL-database_url-014",
+          "CAL-database_url-015",
+          "CAL-database_url-016",
+          "CAL-database_url-025",
+          "CAL-gcp_service_account_json-000",
+          "CAL-gcp_service_account_json-001",
+          "CAL-gcp_service_account_json-002",
+          "CAL-gcp_service_account_json-003",
+          "CAL-gcp_service_account_json-004",
+          "CAL-gcp_service_account_json-005",
+          "CAL-gcp_service_account_json-006",
+          "CAL-gcp_service_account_json-007",
+          "CAL-gcp_service_account_json-008",
+          "CAL-gcp_service_account_json-009",
+          "CAL-gcp_service_account_json-010",
+          "CAL-gcp_service_account_json-011",
+          "CAL-gcp_service_account_json-012",
+          "CAL-gcp_service_account_json-013",
+          "CAL-gcp_service_account_json-014",
+          "CAL-gcp_service_account_json-015",
+          "CAL-gcp_service_account_json-016",
+          "CAL-gcp_service_account_json-017",
+          "CAL-gcp_service_account_json-018",
+          "CAL-gcp_service_account_json-019",
+          "CAL-gcp_service_account_json-020",
+          "CAL-gcp_service_account_json-021",
+          "CAL-gcp_service_account_json-022",
+          "CAL-gcp_service_account_json-023",
+          "CAL-gcp_service_account_json-024",
+          "CAL-gcp_service_account_json-025",
+          "CAL-gcp_service_account_json-026",
+          "CAL-gcp_service_account_json-027",
+          "CAL-gcp_service_account_json-028",
+          "CAL-gcp_service_account_json-029",
+          "CAL-gitlab_pat-000",
+          "CAL-gitlab_pat-001",
+          "CAL-gitlab_pat-002",
+          "CAL-gitlab_pat-003",
+          "CAL-gitlab_pat-004",
+          "CAL-gitlab_pat-005",
+          "CAL-gitlab_pat-006",
+          "CAL-gitlab_pat-007",
+          "CAL-gitlab_pat-010",
+          "CAL-gitlab_pat-011",
+          "CAL-gitlab_pat-012",
+          "CAL-gitlab_pat-014",
+          "CAL-gitlab_pat-015",
+          "CAL-gitlab_pat-017",
+          "CAL-gitlab_pat-020",
+          "CAL-gitlab_pat-021",
+          "CAL-gitlab_pat-022",
+          "CAL-gitlab_pat-023",
+          "CAL-gitlab_pat-024",
+          "CAL-gitlab_pat-027",
+          "CAL-keyword_generic_secret-015",
+          "CAL-keyword_hex_secret-001",
+          "CAL-keyword_hex_secret-003",
+          "CAL-keyword_hex_secret-007",
+          "CAL-keyword_hex_secret-009",
+          "CAL-keyword_hex_secret-013",
+          "CAL-keyword_hex_secret-014",
+          "CAL-keyword_hex_secret-016",
+          "CAL-keyword_hex_secret-018",
+          "CAL-keyword_hex_secret-020",
+          "CAL-keyword_hex_secret-026",
+          "CAL-keyword_hex_secret-027",
+          "CAL-keyword_hex_secret-029",
+          "CAL-obfuscated_provider_token-000",
+          "CAL-obfuscated_provider_token-006",
+          "CAL-obfuscated_provider_token-013",
+          "CAL-obfuscated_provider_token-014",
+          "CAL-obfuscated_provider_token-018",
+          "CAL-obfuscated_provider_token-021",
+          "CAL-obfuscated_provider_token-025",
+          "CAL-obfuscated_provider_token-027",
+          "CAL-password_assignment-000",
+          "CAL-password_assignment-001",
+          "CAL-password_assignment-002",
+          "CAL-password_assignment-003",
+          "CAL-password_assignment-004",
+          "CAL-password_assignment-005",
+          "CAL-password_assignment-006",
+          "CAL-password_assignment-007",
+          "CAL-password_assignment-008",
+          "CAL-password_assignment-009",
+          "CAL-password_assignment-010",
+          "CAL-password_assignment-011",
+          "CAL-password_assignment-012",
+          "CAL-password_assignment-013",
+          "CAL-password_assignment-014",
+          "CAL-password_assignment-015",
+          "CAL-password_assignment-016",
+          "CAL-password_assignment-017",
+          "CAL-password_assignment-018",
+          "CAL-password_assignment-019",
+          "CAL-password_assignment-020",
+          "CAL-password_assignment-021",
+          "CAL-password_assignment-022",
+          "CAL-password_assignment-023",
+          "CAL-password_assignment-024",
+          "CAL-password_assignment-025",
+          "CAL-password_assignment-026",
+          "CAL-password_assignment-027",
+          "CAL-password_assignment-028",
+          "CAL-password_assignment-029"
+        ],
+        "false_positives": [
+          "CAL-base64_english_text-000",
+          "CAL-base64_english_text-001",
+          "CAL-base64_english_text-002",
+          "CAL-base64_english_text-003",
+          "CAL-base64_english_text-004",
+          "CAL-base64_english_text-005",
+          "CAL-base64_english_text-006",
+          "CAL-base64_english_text-007",
+          "CAL-base64_english_text-008",
+          "CAL-base64_english_text-009",
+          "CAL-base64_english_text-010",
+          "CAL-base64_english_text-011",
+          "CAL-base64_english_text-012",
+          "CAL-base64_english_text-013",
+          "CAL-base64_english_text-014",
+          "CAL-base64_english_text-015",
+          "CAL-base64_english_text-016",
+          "CAL-base64_english_text-017",
+          "CAL-base64_english_text-018",
+          "CAL-base64_english_text-019",
+          "CAL-base64_english_text-020",
+          "CAL-base64_english_text-021",
+          "CAL-base64_english_text-022",
+          "CAL-base64_english_text-023",
+          "CAL-base64_english_text-024",
+          "CAL-base64_english_text-025",
+          "CAL-base64_english_text-026",
+          "CAL-base64_english_text-027",
+          "CAL-base64_english_text-028",
+          "CAL-base64_english_text-029",
+          "CAL-labelled_request_id-000",
+          "CAL-labelled_request_id-001",
+          "CAL-labelled_request_id-002",
+          "CAL-labelled_request_id-003",
+          "CAL-labelled_request_id-004",
+          "CAL-labelled_request_id-005",
+          "CAL-labelled_request_id-006",
+          "CAL-labelled_request_id-007",
+          "CAL-labelled_request_id-008",
+          "CAL-labelled_request_id-009",
+          "CAL-labelled_request_id-010",
+          "CAL-labelled_request_id-011",
+          "CAL-labelled_request_id-012",
+          "CAL-labelled_request_id-013",
+          "CAL-labelled_request_id-014",
+          "CAL-labelled_request_id-016",
+          "CAL-labelled_request_id-017",
+          "CAL-labelled_request_id-018",
+          "CAL-labelled_request_id-019",
+          "CAL-labelled_request_id-020",
+          "CAL-labelled_request_id-021",
+          "CAL-labelled_request_id-022",
+          "CAL-labelled_request_id-023",
+          "CAL-labelled_request_id-024",
+          "CAL-labelled_request_id-025",
+          "CAL-labelled_request_id-026",
+          "CAL-labelled_request_id-027",
+          "CAL-labelled_request_id-028",
+          "CAL-labelled_request_id-029",
+          "CAL-pem_public_material-000",
+          "CAL-pem_public_material-001",
+          "CAL-pem_public_material-007",
+          "CAL-pem_public_material-008",
+          "CAL-pem_public_material-009",
+          "CAL-pem_public_material-010",
+          "CAL-pem_public_material-015",
+          "CAL-pem_public_material-016",
+          "CAL-pem_public_material-017",
+          "CAL-pem_public_material-018",
+          "CAL-pem_public_material-020",
+          "CAL-pem_public_material-022",
+          "CAL-pem_public_material-023",
+          "CAL-pem_public_material-024",
+          "CAL-pem_public_material-025",
+          "CAL-pem_public_material-026",
+          "CAL-pem_public_material-027",
+          "CAL-placeholder_database_url-000",
+          "CAL-placeholder_database_url-001",
+          "CAL-placeholder_database_url-002",
+          "CAL-placeholder_database_url-003",
+          "CAL-placeholder_database_url-004",
+          "CAL-placeholder_database_url-005",
+          "CAL-placeholder_database_url-006",
+          "CAL-placeholder_database_url-007",
+          "CAL-placeholder_database_url-008",
+          "CAL-placeholder_database_url-009",
+          "CAL-placeholder_database_url-010",
+          "CAL-placeholder_database_url-011",
+          "CAL-placeholder_database_url-012",
+          "CAL-placeholder_database_url-013",
+          "CAL-placeholder_database_url-014",
+          "CAL-placeholder_database_url-015",
+          "CAL-placeholder_database_url-016",
+          "CAL-placeholder_database_url-017",
+          "CAL-placeholder_database_url-018",
+          "CAL-placeholder_database_url-019",
+          "CAL-placeholder_database_url-020",
+          "CAL-placeholder_database_url-021",
+          "CAL-placeholder_database_url-022",
+          "CAL-placeholder_database_url-023",
+          "CAL-placeholder_database_url-024",
+          "CAL-placeholder_database_url-025",
+          "CAL-placeholder_database_url-026",
+          "CAL-placeholder_database_url-027",
+          "CAL-placeholder_database_url-028",
+          "CAL-placeholder_database_url-029",
+          "CAL-sri_integrity_hash-000",
+          "CAL-sri_integrity_hash-001",
+          "CAL-sri_integrity_hash-002",
+          "CAL-sri_integrity_hash-003",
+          "CAL-sri_integrity_hash-004",
+          "CAL-sri_integrity_hash-005",
+          "CAL-sri_integrity_hash-006",
+          "CAL-sri_integrity_hash-007",
+          "CAL-sri_integrity_hash-008",
+          "CAL-sri_integrity_hash-009",
+          "CAL-sri_integrity_hash-010",
+          "CAL-sri_integrity_hash-011",
+          "CAL-sri_integrity_hash-012",
+          "CAL-sri_integrity_hash-013",
+          "CAL-sri_integrity_hash-014",
+          "CAL-sri_integrity_hash-015",
+          "CAL-sri_integrity_hash-016",
+          "CAL-sri_integrity_hash-017",
+          "CAL-sri_integrity_hash-018",
+          "CAL-sri_integrity_hash-019",
+          "CAL-sri_integrity_hash-020",
+          "CAL-sri_integrity_hash-021",
+          "CAL-sri_integrity_hash-022",
+          "CAL-sri_integrity_hash-023",
+          "CAL-sri_integrity_hash-024",
+          "CAL-sri_integrity_hash-025",
+          "CAL-sri_integrity_hash-026",
+          "CAL-sri_integrity_hash-027",
+          "CAL-sri_integrity_hash-028",
+          "CAL-sri_integrity_hash-029",
+          "CAL-ssh_public_key-000",
+          "CAL-ssh_public_key-001",
+          "CAL-ssh_public_key-002",
+          "CAL-ssh_public_key-003",
+          "CAL-ssh_public_key-004",
+          "CAL-ssh_public_key-005",
+          "CAL-ssh_public_key-006",
+          "CAL-ssh_public_key-007",
+          "CAL-ssh_public_key-008",
+          "CAL-ssh_public_key-009",
+          "CAL-ssh_public_key-010",
+          "CAL-ssh_public_key-011",
+          "CAL-ssh_public_key-012",
+          "CAL-ssh_public_key-013",
+          "CAL-ssh_public_key-014",
+          "CAL-ssh_public_key-015",
+          "CAL-ssh_public_key-016",
+          "CAL-ssh_public_key-017",
+          "CAL-ssh_public_key-018",
+          "CAL-ssh_public_key-019",
+          "CAL-ssh_public_key-020",
+          "CAL-ssh_public_key-021",
+          "CAL-ssh_public_key-022",
+          "CAL-ssh_public_key-023",
+          "CAL-ssh_public_key-024",
+          "CAL-ssh_public_key-025",
+          "CAL-ssh_public_key-026",
+          "CAL-ssh_public_key-027",
+          "CAL-ssh_public_key-028",
+          "CAL-ssh_public_key-029",
+          "CAL-stripe_publishable_key-000",
+          "CAL-stripe_publishable_key-001",
+          "CAL-stripe_publishable_key-002",
+          "CAL-stripe_publishable_key-003",
+          "CAL-stripe_publishable_key-004",
+          "CAL-stripe_publishable_key-005",
+          "CAL-stripe_publishable_key-006",
+          "CAL-stripe_publishable_key-007",
+          "CAL-stripe_publishable_key-008",
+          "CAL-stripe_publishable_key-009",
+          "CAL-stripe_publishable_key-010",
+          "CAL-stripe_publishable_key-011",
+          "CAL-stripe_publishable_key-012",
+          "CAL-stripe_publishable_key-013",
+          "CAL-stripe_publishable_key-014",
+          "CAL-stripe_publishable_key-015",
+          "CAL-stripe_publishable_key-016",
+          "CAL-stripe_publishable_key-017",
+          "CAL-stripe_publishable_key-018",
+          "CAL-stripe_publishable_key-019",
+          "CAL-stripe_publishable_key-020",
+          "CAL-stripe_publishable_key-021",
+          "CAL-stripe_publishable_key-022",
+          "CAL-stripe_publishable_key-023",
+          "CAL-stripe_publishable_key-024",
+          "CAL-stripe_publishable_key-025",
+          "CAL-stripe_publishable_key-026",
+          "CAL-stripe_publishable_key-027",
+          "CAL-stripe_publishable_key-028",
+          "CAL-stripe_publishable_key-029"
+        ]
+      }
+    },
+    "heldout/v4.0.0": {
+      "n": 3060,
+      "positives": 1560,
+      "negatives": 1500,
+      "tp": 1432,
+      "fp": 111,
+      "tn": 1389,
+      "fn": 128,
+      "precision": 0.9281,
+      "precision_ci95": [
+        0.9141,
+        0.9399
+      ],
+      "recall": 0.9179,
+      "recall_ci95": [
+        0.9033,
+        0.9306
+      ],
+      "f1": 0.923,
+      "specificity": 0.926,
+      "specificity_ci95": [
+        0.9116,
+        0.9382
+      ],
+      "false_positive_rate": 0.074,
+      "false_negative_rate": 0.0821,
+      "mean_scan_ms": 0.0842,
+      "per_category": {
+        "anthropic_api_key": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "aws_access_key_id": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "aws_arn": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "aws_secret_access_key_ctx": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "aws_session_token": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "bare_random_base62": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 56,
+          "recall": 0.9333,
+          "ci95": [
+            0.8407,
+            0.9738
+          ]
+        },
+        "bare_random_base64_40": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 59,
+          "recall": 0.9833,
+          "ci95": [
+            0.9114,
+            0.9971
+          ]
+        },
+        "bare_random_hex": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 0,
+          "recall": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "base64_english_text": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "code_without_secret": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "container_image_digest": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "database_url": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "gcp_service_account_json": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "github_classic_token": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "github_fine_grained_pat": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "gitlab_pat": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "google_api_key": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "keyword_generic_secret": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "keyword_hex_secret": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "labelled_request_id": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "long_identifier": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "md5_digest": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "obfuscated_provider_token": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "openai_api_key": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "password_assignment": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "pem_private_key": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "pem_public_material": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "placeholder_assignment": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "placeholder_database_url": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "prose": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "sha1_git_commit": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "sha256_hex_digest": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "slack_bot_token": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "slack_webhook": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "sri_integrity_hash": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "ssh_public_key": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "stripe_publishable_key": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "stripe_secret_key": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "ulid": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "unseen_aws_request_id": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "unseen_digitalocean_token": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 0,
+          "recall": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "unseen_git_lfs_pointer": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "unseen_header_api_token": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "unseen_k8s_pod_name": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 52,
+          "false_positive_rate": 0.8667,
+          "ci95": [
+            0.7583,
+            0.9309
+          ]
+        },
+        "unseen_nanoid_share_url": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 59,
+          "false_positive_rate": 0.9833,
+          "ci95": [
+            0.9114,
+            0.9971
+          ]
+        },
+        "unseen_npm_integrity": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "unseen_npm_token": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 57,
+          "recall": 0.95,
+          "ci95": [
+            0.863,
+            0.9829
+          ]
+        },
+        "unseen_sendgrid_key": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "url_with_path": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "uuid": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "version_and_numbers": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        }
+      },
+      "errors": {
+        "false_negatives": [
+          "HEL-bare_random_base62-009",
+          "HEL-bare_random_base62-021",
+          "HEL-bare_random_base62-034",
+          "HEL-bare_random_base62-041",
+          "HEL-bare_random_base64_40-015",
+          "HEL-bare_random_hex-000",
+          "HEL-bare_random_hex-001",
+          "HEL-bare_random_hex-002",
+          "HEL-bare_random_hex-003",
+          "HEL-bare_random_hex-004",
+          "HEL-bare_random_hex-005",
+          "HEL-bare_random_hex-006",
+          "HEL-bare_random_hex-007",
+          "HEL-bare_random_hex-008",
+          "HEL-bare_random_hex-009",
+          "HEL-bare_random_hex-010",
+          "HEL-bare_random_hex-011",
+          "HEL-bare_random_hex-012",
+          "HEL-bare_random_hex-013",
+          "HEL-bare_random_hex-014",
+          "HEL-bare_random_hex-015",
+          "HEL-bare_random_hex-016",
+          "HEL-bare_random_hex-017",
+          "HEL-bare_random_hex-018",
+          "HEL-bare_random_hex-019",
+          "HEL-bare_random_hex-020",
+          "HEL-bare_random_hex-021",
+          "HEL-bare_random_hex-022",
+          "HEL-bare_random_hex-023",
+          "HEL-bare_random_hex-024",
+          "HEL-bare_random_hex-025",
+          "HEL-bare_random_hex-026",
+          "HEL-bare_random_hex-027",
+          "HEL-bare_random_hex-028",
+          "HEL-bare_random_hex-029",
+          "HEL-bare_random_hex-030",
+          "HEL-bare_random_hex-031",
+          "HEL-bare_random_hex-032",
+          "HEL-bare_random_hex-033",
+          "HEL-bare_random_hex-034",
+          "HEL-bare_random_hex-035",
+          "HEL-bare_random_hex-036",
+          "HEL-bare_random_hex-037",
+          "HEL-bare_random_hex-038",
+          "HEL-bare_random_hex-039",
+          "HEL-bare_random_hex-040",
+          "HEL-bare_random_hex-041",
+          "HEL-bare_random_hex-042",
+          "HEL-bare_random_hex-043",
+          "HEL-bare_random_hex-044",
+          "HEL-bare_random_hex-045",
+          "HEL-bare_random_hex-046",
+          "HEL-bare_random_hex-047",
+          "HEL-bare_random_hex-048",
+          "HEL-bare_random_hex-049",
+          "HEL-bare_random_hex-050",
+          "HEL-bare_random_hex-051",
+          "HEL-bare_random_hex-052",
+          "HEL-bare_random_hex-053",
+          "HEL-bare_random_hex-054",
+          "HEL-bare_random_hex-055",
+          "HEL-bare_random_hex-056",
+          "HEL-bare_random_hex-057",
+          "HEL-bare_random_hex-058",
+          "HEL-bare_random_hex-059",
+          "HEL-unseen_digitalocean_token-000",
+          "HEL-unseen_digitalocean_token-001",
+          "HEL-unseen_digitalocean_token-002",
+          "HEL-unseen_digitalocean_token-003",
+          "HEL-unseen_digitalocean_token-004",
+          "HEL-unseen_digitalocean_token-005",
+          "HEL-unseen_digitalocean_token-006",
+          "HEL-unseen_digitalocean_token-007",
+          "HEL-unseen_digitalocean_token-008",
+          "HEL-unseen_digitalocean_token-009",
+          "HEL-unseen_digitalocean_token-010",
+          "HEL-unseen_digitalocean_token-011",
+          "HEL-unseen_digitalocean_token-012",
+          "HEL-unseen_digitalocean_token-013",
+          "HEL-unseen_digitalocean_token-014",
+          "HEL-unseen_digitalocean_token-015",
+          "HEL-unseen_digitalocean_token-016",
+          "HEL-unseen_digitalocean_token-017",
+          "HEL-unseen_digitalocean_token-018",
+          "HEL-unseen_digitalocean_token-019",
+          "HEL-unseen_digitalocean_token-020",
+          "HEL-unseen_digitalocean_token-021",
+          "HEL-unseen_digitalocean_token-022",
+          "HEL-unseen_digitalocean_token-023",
+          "HEL-unseen_digitalocean_token-024",
+          "HEL-unseen_digitalocean_token-025",
+          "HEL-unseen_digitalocean_token-026",
+          "HEL-unseen_digitalocean_token-027",
+          "HEL-unseen_digitalocean_token-028",
+          "HEL-unseen_digitalocean_token-029",
+          "HEL-unseen_digitalocean_token-030",
+          "HEL-unseen_digitalocean_token-031",
+          "HEL-unseen_digitalocean_token-032",
+          "HEL-unseen_digitalocean_token-033",
+          "HEL-unseen_digitalocean_token-034",
+          "HEL-unseen_digitalocean_token-035",
+          "HEL-unseen_digitalocean_token-036",
+          "HEL-unseen_digitalocean_token-037",
+          "HEL-unseen_digitalocean_token-038",
+          "HEL-unseen_digitalocean_token-039",
+          "HEL-unseen_digitalocean_token-040",
+          "HEL-unseen_digitalocean_token-041",
+          "HEL-unseen_digitalocean_token-042",
+          "HEL-unseen_digitalocean_token-043",
+          "HEL-unseen_digitalocean_token-044",
+          "HEL-unseen_digitalocean_token-045",
+          "HEL-unseen_digitalocean_token-046",
+          "HEL-unseen_digitalocean_token-047",
+          "HEL-unseen_digitalocean_token-048",
+          "HEL-unseen_digitalocean_token-049",
+          "HEL-unseen_digitalocean_token-050",
+          "HEL-unseen_digitalocean_token-051",
+          "HEL-unseen_digitalocean_token-052",
+          "HEL-unseen_digitalocean_token-053",
+          "HEL-unseen_digitalocean_token-054",
+          "HEL-unseen_digitalocean_token-055",
+          "HEL-unseen_digitalocean_token-056",
+          "HEL-unseen_digitalocean_token-057",
+          "HEL-unseen_digitalocean_token-058",
+          "HEL-unseen_digitalocean_token-059",
+          "HEL-unseen_npm_token-003",
+          "HEL-unseen_npm_token-030",
+          "HEL-unseen_npm_token-050"
+        ],
+        "false_positives": [
+          "HEL-unseen_k8s_pod_name-000",
+          "HEL-unseen_k8s_pod_name-001",
+          "HEL-unseen_k8s_pod_name-002",
+          "HEL-unseen_k8s_pod_name-004",
+          "HEL-unseen_k8s_pod_name-005",
+          "HEL-unseen_k8s_pod_name-006",
+          "HEL-unseen_k8s_pod_name-007",
+          "HEL-unseen_k8s_pod_name-008",
+          "HEL-unseen_k8s_pod_name-009",
+          "HEL-unseen_k8s_pod_name-010",
+          "HEL-unseen_k8s_pod_name-011",
+          "HEL-unseen_k8s_pod_name-012",
+          "HEL-unseen_k8s_pod_name-013",
+          "HEL-unseen_k8s_pod_name-014",
+          "HEL-unseen_k8s_pod_name-015",
+          "HEL-unseen_k8s_pod_name-016",
+          "HEL-unseen_k8s_pod_name-017",
+          "HEL-unseen_k8s_pod_name-018",
+          "HEL-unseen_k8s_pod_name-019",
+          "HEL-unseen_k8s_pod_name-020",
+          "HEL-unseen_k8s_pod_name-021",
+          "HEL-unseen_k8s_pod_name-022",
+          "HEL-unseen_k8s_pod_name-023",
+          "HEL-unseen_k8s_pod_name-024",
+          "HEL-unseen_k8s_pod_name-025",
+          "HEL-unseen_k8s_pod_name-029",
+          "HEL-unseen_k8s_pod_name-030",
+          "HEL-unseen_k8s_pod_name-031",
+          "HEL-unseen_k8s_pod_name-032",
+          "HEL-unseen_k8s_pod_name-033",
+          "HEL-unseen_k8s_pod_name-034",
+          "HEL-unseen_k8s_pod_name-035",
+          "HEL-unseen_k8s_pod_name-036",
+          "HEL-unseen_k8s_pod_name-037",
+          "HEL-unseen_k8s_pod_name-038",
+          "HEL-unseen_k8s_pod_name-039",
+          "HEL-unseen_k8s_pod_name-040",
+          "HEL-unseen_k8s_pod_name-041",
+          "HEL-unseen_k8s_pod_name-042",
+          "HEL-unseen_k8s_pod_name-043",
+          "HEL-unseen_k8s_pod_name-044",
+          "HEL-unseen_k8s_pod_name-045",
+          "HEL-unseen_k8s_pod_name-046",
+          "HEL-unseen_k8s_pod_name-047",
+          "HEL-unseen_k8s_pod_name-048",
+          "HEL-unseen_k8s_pod_name-049",
+          "HEL-unseen_k8s_pod_name-051",
+          "HEL-unseen_k8s_pod_name-052",
+          "HEL-unseen_k8s_pod_name-055",
+          "HEL-unseen_k8s_pod_name-056",
+          "HEL-unseen_k8s_pod_name-057",
+          "HEL-unseen_k8s_pod_name-058",
+          "HEL-unseen_nanoid_share_url-000",
+          "HEL-unseen_nanoid_share_url-001",
+          "HEL-unseen_nanoid_share_url-002",
+          "HEL-unseen_nanoid_share_url-003",
+          "HEL-unseen_nanoid_share_url-004",
+          "HEL-unseen_nanoid_share_url-005",
+          "HEL-unseen_nanoid_share_url-006",
+          "HEL-unseen_nanoid_share_url-007",
+          "HEL-unseen_nanoid_share_url-008",
+          "HEL-unseen_nanoid_share_url-009",
+          "HEL-unseen_nanoid_share_url-010",
+          "HEL-unseen_nanoid_share_url-011",
+          "HEL-unseen_nanoid_share_url-012",
+          "HEL-unseen_nanoid_share_url-013",
+          "HEL-unseen_nanoid_share_url-014",
+          "HEL-unseen_nanoid_share_url-015",
+          "HEL-unseen_nanoid_share_url-016",
+          "HEL-unseen_nanoid_share_url-017",
+          "HEL-unseen_nanoid_share_url-018",
+          "HEL-unseen_nanoid_share_url-019",
+          "HEL-unseen_nanoid_share_url-020",
+          "HEL-unseen_nanoid_share_url-021",
+          "HEL-unseen_nanoid_share_url-022",
+          "HEL-unseen_nanoid_share_url-023",
+          "HEL-unseen_nanoid_share_url-024",
+          "HEL-unseen_nanoid_share_url-025",
+          "HEL-unseen_nanoid_share_url-026",
+          "HEL-unseen_nanoid_share_url-027",
+          "HEL-unseen_nanoid_share_url-028",
+          "HEL-unseen_nanoid_share_url-029",
+          "HEL-unseen_nanoid_share_url-030",
+          "HEL-unseen_nanoid_share_url-031",
+          "HEL-unseen_nanoid_share_url-032",
+          "HEL-unseen_nanoid_share_url-033",
+          "HEL-unseen_nanoid_share_url-034",
+          "HEL-unseen_nanoid_share_url-035",
+          "HEL-unseen_nanoid_share_url-036",
+          "HEL-unseen_nanoid_share_url-037",
+          "HEL-unseen_nanoid_share_url-038",
+          "HEL-unseen_nanoid_share_url-039",
+          "HEL-unseen_nanoid_share_url-040",
+          "HEL-unseen_nanoid_share_url-041",
+          "HEL-unseen_nanoid_share_url-042",
+          "HEL-unseen_nanoid_share_url-043",
+          "HEL-unseen_nanoid_share_url-044",
+          "HEL-unseen_nanoid_share_url-045",
+          "HEL-unseen_nanoid_share_url-046",
+          "HEL-unseen_nanoid_share_url-047",
+          "HEL-unseen_nanoid_share_url-048",
+          "HEL-unseen_nanoid_share_url-049",
+          "HEL-unseen_nanoid_share_url-050",
+          "HEL-unseen_nanoid_share_url-051",
+          "HEL-unseen_nanoid_share_url-052",
+          "HEL-unseen_nanoid_share_url-053",
+          "HEL-unseen_nanoid_share_url-054",
+          "HEL-unseen_nanoid_share_url-055",
+          "HEL-unseen_nanoid_share_url-056",
+          "HEL-unseen_nanoid_share_url-058",
+          "HEL-unseen_nanoid_share_url-059"
+        ]
+      }
+    },
+    "heldout/v3.2.0": {
+      "n": 3060,
+      "positives": 1560,
+      "negatives": 1500,
+      "tp": 1209,
+      "fp": 488,
+      "tn": 1012,
+      "fn": 351,
+      "precision": 0.7124,
+      "precision_ci95": [
+        0.6904,
+        0.7335
+      ],
+      "recall": 0.775,
+      "recall_ci95": [
+        0.7536,
+        0.795
+      ],
+      "f1": 0.7424,
+      "specificity": 0.6747,
+      "specificity_ci95": [
+        0.6505,
+        0.6979
+      ],
+      "false_positive_rate": 0.3253,
+      "false_negative_rate": 0.225,
+      "mean_scan_ms": 0.074,
+      "per_category": {
+        "anthropic_api_key": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "aws_access_key_id": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "aws_arn": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "aws_secret_access_key_ctx": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 59,
+          "recall": 0.9833,
+          "ci95": [
+            0.9114,
+            0.9971
+          ]
+        },
+        "aws_session_token": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "bare_random_base62": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 53,
+          "recall": 0.8833,
+          "ci95": [
+            0.7782,
+            0.9423
+          ]
+        },
+        "bare_random_base64_40": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "bare_random_hex": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 0,
+          "recall": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "base64_english_text": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 60,
+          "false_positive_rate": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "code_without_secret": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "container_image_digest": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "database_url": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 49,
+          "recall": 0.8167,
+          "ci95": [
+            0.7008,
+            0.8944
+          ]
+        },
+        "gcp_service_account_json": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 0,
+          "recall": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "github_classic_token": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "github_fine_grained_pat": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "gitlab_pat": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 12,
+          "recall": 0.2,
+          "ci95": [
+            0.1183,
+            0.3178
+          ]
+        },
+        "google_api_key": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "keyword_generic_secret": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 55,
+          "recall": 0.9167,
+          "ci95": [
+            0.8193,
+            0.9639
+          ]
+        },
+        "keyword_hex_secret": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 37,
+          "recall": 0.6167,
+          "ci95": [
+            0.4902,
+            0.7291
+          ]
+        },
+        "labelled_request_id": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 57,
+          "false_positive_rate": 0.95,
+          "ci95": [
+            0.863,
+            0.9829
+          ]
+        },
+        "long_identifier": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "md5_digest": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "obfuscated_provider_token": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 45,
+          "recall": 0.75,
+          "ci95": [
+            0.6277,
+            0.8422
+          ]
+        },
+        "openai_api_key": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "password_assignment": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 1,
+          "recall": 0.0167,
+          "ci95": [
+            0.0029,
+            0.0886
+          ]
+        },
+        "pem_private_key": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "pem_public_material": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 28,
+          "false_positive_rate": 0.4667,
+          "ci95": [
+            0.3463,
+            0.5911
+          ]
+        },
+        "placeholder_assignment": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "placeholder_database_url": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 60,
+          "false_positive_rate": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "prose": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "sha1_git_commit": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "sha256_hex_digest": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "slack_bot_token": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "slack_webhook": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "sri_integrity_hash": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 60,
+          "false_positive_rate": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "ssh_public_key": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 60,
+          "false_positive_rate": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "stripe_publishable_key": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 59,
+          "false_positive_rate": 0.9833,
+          "ci95": [
+            0.9114,
+            0.9971
+          ]
+        },
+        "stripe_secret_key": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 58,
+          "recall": 0.9667,
+          "ci95": [
+            0.8864,
+            0.9908
+          ]
+        },
+        "ulid": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 6,
+          "false_positive_rate": 0.1,
+          "ci95": [
+            0.0466,
+            0.2015
+          ]
+        },
+        "unseen_aws_request_id": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "unseen_digitalocean_token": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 0,
+          "recall": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "unseen_git_lfs_pointer": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "unseen_header_api_token": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "unseen_k8s_pod_name": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "unseen_nanoid_share_url": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 38,
+          "false_positive_rate": 0.6333,
+          "ci95": [
+            0.5068,
+            0.7438
+          ]
+        },
+        "unseen_npm_integrity": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 60,
+          "false_positive_rate": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "unseen_npm_token": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "unseen_sendgrid_key": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "url_with_path": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "uuid": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "version_and_numbers": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        }
+      },
+      "errors": {
+        "false_negatives": [
+          "HEL-aws_secret_access_key_ctx-005",
+          "HEL-bare_random_base62-012",
+          "HEL-bare_random_base62-024",
+          "HEL-bare_random_base62-025",
+          "HEL-bare_random_base62-040",
+          "HEL-bare_random_base62-041",
+          "HEL-bare_random_base62-049",
+          "HEL-bare_random_base62-055",
+          "HEL-bare_random_hex-000",
+          "HEL-bare_random_hex-001",
+          "HEL-bare_random_hex-002",
+          "HEL-bare_random_hex-003",
+          "HEL-bare_random_hex-004",
+          "HEL-bare_random_hex-005",
+          "HEL-bare_random_hex-006",
+          "HEL-bare_random_hex-007",
+          "HEL-bare_random_hex-008",
+          "HEL-bare_random_hex-009",
+          "HEL-bare_random_hex-010",
+          "HEL-bare_random_hex-011",
+          "HEL-bare_random_hex-012",
+          "HEL-bare_random_hex-013",
+          "HEL-bare_random_hex-014",
+          "HEL-bare_random_hex-015",
+          "HEL-bare_random_hex-016",
+          "HEL-bare_random_hex-017",
+          "HEL-bare_random_hex-018",
+          "HEL-bare_random_hex-019",
+          "HEL-bare_random_hex-020",
+          "HEL-bare_random_hex-021",
+          "HEL-bare_random_hex-022",
+          "HEL-bare_random_hex-023",
+          "HEL-bare_random_hex-024",
+          "HEL-bare_random_hex-025",
+          "HEL-bare_random_hex-026",
+          "HEL-bare_random_hex-027",
+          "HEL-bare_random_hex-028",
+          "HEL-bare_random_hex-029",
+          "HEL-bare_random_hex-030",
+          "HEL-bare_random_hex-031",
+          "HEL-bare_random_hex-032",
+          "HEL-bare_random_hex-033",
+          "HEL-bare_random_hex-034",
+          "HEL-bare_random_hex-035",
+          "HEL-bare_random_hex-036",
+          "HEL-bare_random_hex-037",
+          "HEL-bare_random_hex-038",
+          "HEL-bare_random_hex-039",
+          "HEL-bare_random_hex-040",
+          "HEL-bare_random_hex-041",
+          "HEL-bare_random_hex-042",
+          "HEL-bare_random_hex-043",
+          "HEL-bare_random_hex-044",
+          "HEL-bare_random_hex-045",
+          "HEL-bare_random_hex-046",
+          "HEL-bare_random_hex-047",
+          "HEL-bare_random_hex-048",
+          "HEL-bare_random_hex-049",
+          "HEL-bare_random_hex-050",
+          "HEL-bare_random_hex-051",
+          "HEL-bare_random_hex-052",
+          "HEL-bare_random_hex-053",
+          "HEL-bare_random_hex-054",
+          "HEL-bare_random_hex-055",
+          "HEL-bare_random_hex-056",
+          "HEL-bare_random_hex-057",
+          "HEL-bare_random_hex-058",
+          "HEL-bare_random_hex-059",
+          "HEL-database_url-011",
+          "HEL-database_url-014",
+          "HEL-database_url-015",
+          "HEL-database_url-020",
+          "HEL-database_url-021",
+          "HEL-database_url-030",
+          "HEL-database_url-034",
+          "HEL-database_url-036",
+          "HEL-database_url-045",
+          "HEL-database_url-048",
+          "HEL-database_url-057",
+          "HEL-gcp_service_account_json-000",
+          "HEL-gcp_service_account_json-001",
+          "HEL-gcp_service_account_json-002",
+          "HEL-gcp_service_account_json-003",
+          "HEL-gcp_service_account_json-004",
+          "HEL-gcp_service_account_json-005",
+          "HEL-gcp_service_account_json-006",
+          "HEL-gcp_service_account_json-007",
+          "HEL-gcp_service_account_json-008",
+          "HEL-gcp_service_account_json-009",
+          "HEL-gcp_service_account_json-010",
+          "HEL-gcp_service_account_json-011",
+          "HEL-gcp_service_account_json-012",
+          "HEL-gcp_service_account_json-013",
+          "HEL-gcp_service_account_json-014",
+          "HEL-gcp_service_account_json-015",
+          "HEL-gcp_service_account_json-016",
+          "HEL-gcp_service_account_json-017",
+          "HEL-gcp_service_account_json-018",
+          "HEL-gcp_service_account_json-019",
+          "HEL-gcp_service_account_json-020",
+          "HEL-gcp_service_account_json-021",
+          "HEL-gcp_service_account_json-022",
+          "HEL-gcp_service_account_json-023",
+          "HEL-gcp_service_account_json-024",
+          "HEL-gcp_service_account_json-025",
+          "HEL-gcp_service_account_json-026",
+          "HEL-gcp_service_account_json-027",
+          "HEL-gcp_service_account_json-028",
+          "HEL-gcp_service_account_json-029",
+          "HEL-gcp_service_account_json-030",
+          "HEL-gcp_service_account_json-031",
+          "HEL-gcp_service_account_json-032",
+          "HEL-gcp_service_account_json-033",
+          "HEL-gcp_service_account_json-034",
+          "HEL-gcp_service_account_json-035",
+          "HEL-gcp_service_account_json-036",
+          "HEL-gcp_service_account_json-037",
+          "HEL-gcp_service_account_json-038",
+          "HEL-gcp_service_account_json-039",
+          "HEL-gcp_service_account_json-040",
+          "HEL-gcp_service_account_json-041",
+          "HEL-gcp_service_account_json-042",
+          "HEL-gcp_service_account_json-043",
+          "HEL-gcp_service_account_json-044",
+          "HEL-gcp_service_account_json-045",
+          "HEL-gcp_service_account_json-046",
+          "HEL-gcp_service_account_json-047",
+          "HEL-gcp_service_account_json-048",
+          "HEL-gcp_service_account_json-049",
+          "HEL-gcp_service_account_json-050",
+          "HEL-gcp_service_account_json-051",
+          "HEL-gcp_service_account_json-052",
+          "HEL-gcp_service_account_json-053",
+          "HEL-gcp_service_account_json-054",
+          "HEL-gcp_service_account_json-055",
+          "HEL-gcp_service_account_json-056",
+          "HEL-gcp_service_account_json-057",
+          "HEL-gcp_service_account_json-058",
+          "HEL-gcp_service_account_json-059",
+          "HEL-gitlab_pat-000",
+          "HEL-gitlab_pat-002",
+          "HEL-gitlab_pat-003",
+          "HEL-gitlab_pat-005",
+          "HEL-gitlab_pat-006",
+          "HEL-gitlab_pat-007",
+          "HEL-gitlab_pat-008",
+          "HEL-gitlab_pat-009",
+          "HEL-gitlab_pat-010",
+          "HEL-gitlab_pat-011",
+          "HEL-gitlab_pat-012",
+          "HEL-gitlab_pat-013",
+          "HEL-gitlab_pat-014",
+          "HEL-gitlab_pat-015",
+          "HEL-gitlab_pat-016",
+          "HEL-gitlab_pat-018",
+          "HEL-gitlab_pat-019",
+          "HEL-gitlab_pat-020",
+          "HEL-gitlab_pat-021",
+          "HEL-gitlab_pat-022",
+          "HEL-gitlab_pat-023",
+          "HEL-gitlab_pat-024",
+          "HEL-gitlab_pat-026",
+          "HEL-gitlab_pat-027",
+          "HEL-gitlab_pat-028",
+          "HEL-gitlab_pat-029",
+          "HEL-gitlab_pat-030",
+          "HEL-gitlab_pat-031",
+          "HEL-gitlab_pat-033",
+          "HEL-gitlab_pat-034",
+          "HEL-gitlab_pat-035",
+          "HEL-gitlab_pat-037",
+          "HEL-gitlab_pat-038",
+          "HEL-gitlab_pat-039",
+          "HEL-gitlab_pat-040",
+          "HEL-gitlab_pat-042",
+          "HEL-gitlab_pat-045",
+          "HEL-gitlab_pat-046",
+          "HEL-gitlab_pat-049",
+          "HEL-gitlab_pat-050",
+          "HEL-gitlab_pat-051",
+          "HEL-gitlab_pat-052",
+          "HEL-gitlab_pat-053",
+          "HEL-gitlab_pat-054",
+          "HEL-gitlab_pat-055",
+          "HEL-gitlab_pat-056",
+          "HEL-gitlab_pat-057",
+          "HEL-gitlab_pat-059",
+          "HEL-keyword_generic_secret-002",
+          "HEL-keyword_generic_secret-022",
+          "HEL-keyword_generic_secret-040",
+          "HEL-keyword_generic_secret-055",
+          "HEL-keyword_generic_secret-057",
+          "HEL-keyword_hex_secret-002",
+          "HEL-keyword_hex_secret-003",
+          "HEL-keyword_hex_secret-005",
+          "HEL-keyword_hex_secret-008",
+          "HEL-keyword_hex_secret-009",
+          "HEL-keyword_hex_secret-012",
+          "HEL-keyword_hex_secret-020",
+          "HEL-keyword_hex_secret-024"
+        ],
+        "false_positives": [
+          "HEL-base64_english_text-000",
+          "HEL-base64_english_text-001",
+          "HEL-base64_english_text-002",
+          "HEL-base64_english_text-003",
+          "HEL-base64_english_text-004",
+          "HEL-base64_english_text-005",
+          "HEL-base64_english_text-006",
+          "HEL-base64_english_text-007",
+          "HEL-base64_english_text-008",
+          "HEL-base64_english_text-009",
+          "HEL-base64_english_text-010",
+          "HEL-base64_english_text-011",
+          "HEL-base64_english_text-012",
+          "HEL-base64_english_text-013",
+          "HEL-base64_english_text-014",
+          "HEL-base64_english_text-015",
+          "HEL-base64_english_text-016",
+          "HEL-base64_english_text-017",
+          "HEL-base64_english_text-018",
+          "HEL-base64_english_text-019",
+          "HEL-base64_english_text-020",
+          "HEL-base64_english_text-021",
+          "HEL-base64_english_text-022",
+          "HEL-base64_english_text-023",
+          "HEL-base64_english_text-024",
+          "HEL-base64_english_text-025",
+          "HEL-base64_english_text-026",
+          "HEL-base64_english_text-027",
+          "HEL-base64_english_text-028",
+          "HEL-base64_english_text-029",
+          "HEL-base64_english_text-030",
+          "HEL-base64_english_text-031",
+          "HEL-base64_english_text-032",
+          "HEL-base64_english_text-033",
+          "HEL-base64_english_text-034",
+          "HEL-base64_english_text-035",
+          "HEL-base64_english_text-036",
+          "HEL-base64_english_text-037",
+          "HEL-base64_english_text-038",
+          "HEL-base64_english_text-039",
+          "HEL-base64_english_text-040",
+          "HEL-base64_english_text-041",
+          "HEL-base64_english_text-042",
+          "HEL-base64_english_text-043",
+          "HEL-base64_english_text-044",
+          "HEL-base64_english_text-045",
+          "HEL-base64_english_text-046",
+          "HEL-base64_english_text-047",
+          "HEL-base64_english_text-048",
+          "HEL-base64_english_text-049",
+          "HEL-base64_english_text-050",
+          "HEL-base64_english_text-051",
+          "HEL-base64_english_text-052",
+          "HEL-base64_english_text-053",
+          "HEL-base64_english_text-054",
+          "HEL-base64_english_text-055",
+          "HEL-base64_english_text-056",
+          "HEL-base64_english_text-057",
+          "HEL-base64_english_text-058",
+          "HEL-base64_english_text-059",
+          "HEL-labelled_request_id-000",
+          "HEL-labelled_request_id-001",
+          "HEL-labelled_request_id-002",
+          "HEL-labelled_request_id-003",
+          "HEL-labelled_request_id-004",
+          "HEL-labelled_request_id-005",
+          "HEL-labelled_request_id-006",
+          "HEL-labelled_request_id-007",
+          "HEL-labelled_request_id-008",
+          "HEL-labelled_request_id-009",
+          "HEL-labelled_request_id-010",
+          "HEL-labelled_request_id-012",
+          "HEL-labelled_request_id-013",
+          "HEL-labelled_request_id-015",
+          "HEL-labelled_request_id-016",
+          "HEL-labelled_request_id-017",
+          "HEL-labelled_request_id-018",
+          "HEL-labelled_request_id-019",
+          "HEL-labelled_request_id-020",
+          "HEL-labelled_request_id-021",
+          "HEL-labelled_request_id-022",
+          "HEL-labelled_request_id-023",
+          "HEL-labelled_request_id-024",
+          "HEL-labelled_request_id-026",
+          "HEL-labelled_request_id-027",
+          "HEL-labelled_request_id-028",
+          "HEL-labelled_request_id-029",
+          "HEL-labelled_request_id-030",
+          "HEL-labelled_request_id-031",
+          "HEL-labelled_request_id-032",
+          "HEL-labelled_request_id-033",
+          "HEL-labelled_request_id-034",
+          "HEL-labelled_request_id-035",
+          "HEL-labelled_request_id-036",
+          "HEL-labelled_request_id-037",
+          "HEL-labelled_request_id-038",
+          "HEL-labelled_request_id-039",
+          "HEL-labelled_request_id-040",
+          "HEL-labelled_request_id-041",
+          "HEL-labelled_request_id-042",
+          "HEL-labelled_request_id-043",
+          "HEL-labelled_request_id-044",
+          "HEL-labelled_request_id-045",
+          "HEL-labelled_request_id-046",
+          "HEL-labelled_request_id-047",
+          "HEL-labelled_request_id-048",
+          "HEL-labelled_request_id-049",
+          "HEL-labelled_request_id-050",
+          "HEL-labelled_request_id-051",
+          "HEL-labelled_request_id-052",
+          "HEL-labelled_request_id-053",
+          "HEL-labelled_request_id-054",
+          "HEL-labelled_request_id-055",
+          "HEL-labelled_request_id-056",
+          "HEL-labelled_request_id-057",
+          "HEL-labelled_request_id-058",
+          "HEL-labelled_request_id-059",
+          "HEL-pem_public_material-003",
+          "HEL-pem_public_material-007",
+          "HEL-pem_public_material-012",
+          "HEL-pem_public_material-013",
+          "HEL-pem_public_material-014",
+          "HEL-pem_public_material-018",
+          "HEL-pem_public_material-019",
+          "HEL-pem_public_material-020",
+          "HEL-pem_public_material-024",
+          "HEL-pem_public_material-026",
+          "HEL-pem_public_material-030",
+          "HEL-pem_public_material-033",
+          "HEL-pem_public_material-035",
+          "HEL-pem_public_material-036",
+          "HEL-pem_public_material-037",
+          "HEL-pem_public_material-038",
+          "HEL-pem_public_material-039",
+          "HEL-pem_public_material-040",
+          "HEL-pem_public_material-041",
+          "HEL-pem_public_material-042",
+          "HEL-pem_public_material-047",
+          "HEL-pem_public_material-049",
+          "HEL-pem_public_material-051",
+          "HEL-pem_public_material-052",
+          "HEL-pem_public_material-054",
+          "HEL-pem_public_material-056",
+          "HEL-pem_public_material-058",
+          "HEL-pem_public_material-059",
+          "HEL-placeholder_database_url-000",
+          "HEL-placeholder_database_url-001",
+          "HEL-placeholder_database_url-002",
+          "HEL-placeholder_database_url-003",
+          "HEL-placeholder_database_url-004",
+          "HEL-placeholder_database_url-005",
+          "HEL-placeholder_database_url-006",
+          "HEL-placeholder_database_url-007",
+          "HEL-placeholder_database_url-008",
+          "HEL-placeholder_database_url-009",
+          "HEL-placeholder_database_url-010",
+          "HEL-placeholder_database_url-011",
+          "HEL-placeholder_database_url-012",
+          "HEL-placeholder_database_url-013",
+          "HEL-placeholder_database_url-014",
+          "HEL-placeholder_database_url-015",
+          "HEL-placeholder_database_url-016",
+          "HEL-placeholder_database_url-017",
+          "HEL-placeholder_database_url-018",
+          "HEL-placeholder_database_url-019",
+          "HEL-placeholder_database_url-020",
+          "HEL-placeholder_database_url-021",
+          "HEL-placeholder_database_url-022",
+          "HEL-placeholder_database_url-023",
+          "HEL-placeholder_database_url-024",
+          "HEL-placeholder_database_url-025",
+          "HEL-placeholder_database_url-026",
+          "HEL-placeholder_database_url-027",
+          "HEL-placeholder_database_url-028",
+          "HEL-placeholder_database_url-029",
+          "HEL-placeholder_database_url-030",
+          "HEL-placeholder_database_url-031",
+          "HEL-placeholder_database_url-032",
+          "HEL-placeholder_database_url-033",
+          "HEL-placeholder_database_url-034",
+          "HEL-placeholder_database_url-035",
+          "HEL-placeholder_database_url-036",
+          "HEL-placeholder_database_url-037",
+          "HEL-placeholder_database_url-038",
+          "HEL-placeholder_database_url-039",
+          "HEL-placeholder_database_url-040",
+          "HEL-placeholder_database_url-041",
+          "HEL-placeholder_database_url-042",
+          "HEL-placeholder_database_url-043",
+          "HEL-placeholder_database_url-044",
+          "HEL-placeholder_database_url-045",
+          "HEL-placeholder_database_url-046",
+          "HEL-placeholder_database_url-047",
+          "HEL-placeholder_database_url-048",
+          "HEL-placeholder_database_url-049",
+          "HEL-placeholder_database_url-050",
+          "HEL-placeholder_database_url-051",
+          "HEL-placeholder_database_url-052",
+          "HEL-placeholder_database_url-053",
+          "HEL-placeholder_database_url-054"
+        ]
+      }
+    },
+    "heldout2/v4.0.0": {
+      "n": 3000,
+      "positives": 1560,
+      "negatives": 1440,
+      "tp": 1442,
+      "fp": 117,
+      "tn": 1323,
+      "fn": 118,
+      "precision": 0.925,
+      "precision_ci95": [
+        0.9108,
+        0.937
+      ],
+      "recall": 0.9244,
+      "recall_ci95": [
+        0.9102,
+        0.9365
+      ],
+      "f1": 0.9247,
+      "specificity": 0.9187,
+      "specificity_ci95": [
+        0.9035,
+        0.9318
+      ],
+      "false_positive_rate": 0.0813,
+      "false_negative_rate": 0.0756,
+      "mean_scan_ms": 0.0747,
+      "per_category": {
+        "anthropic_api_key": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "aws_access_key_id": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "aws_arn": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "aws_secret_access_key_ctx": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "aws_session_token": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "bare_random_base62": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "bare_random_base64_40": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "bare_random_hex": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 0,
+          "recall": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "base64_english_text": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "code_without_secret": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "container_image_digest": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "database_url": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "gcp_service_account_json": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "github_classic_token": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "github_fine_grained_pat": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "gitlab_pat": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "google_api_key": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "keyword_generic_secret": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "keyword_hex_secret": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "labelled_request_id": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "long_identifier": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "md5_digest": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "obfuscated_provider_token": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "openai_api_key": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "password_assignment": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "pem_private_key": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "pem_public_material": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "placeholder_assignment": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "placeholder_database_url": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "prose": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "sha1_git_commit": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "sha256_hex_digest": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "slack_bot_token": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "slack_webhook": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "sri_integrity_hash": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "ssh_public_key": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "stripe_publishable_key": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "stripe_secret_key": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "ulid": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "unseen2_azure_storage_conn": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "unseen2_bech32_address": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 58,
+          "false_positive_rate": 0.9667,
+          "ci95": [
+            0.8864,
+            0.9908
+          ]
+        },
+        "unseen2_docker_container_id": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "unseen2_drive_file_id": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 59,
+          "false_positive_rate": 0.9833,
+          "ci95": [
+            0.9114,
+            0.9971
+          ]
+        },
+        "unseen2_huggingface_token": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 59,
+          "recall": 0.9833,
+          "ci95": [
+            0.9114,
+            0.9971
+          ]
+        },
+        "unseen2_linear_api_key": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 59,
+          "recall": 0.9833,
+          "ci95": [
+            0.9114,
+            0.9971
+          ]
+        },
+        "unseen2_semver_build_metadata": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "unseen2_shopify_token": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 4,
+          "recall": 0.0667,
+          "ci95": [
+            0.0262,
+            0.1593
+          ]
+        },
+        "url_with_path": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "uuid": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "version_and_numbers": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        }
+      },
+      "errors": {
+        "false_negatives": [
+          "HEL-bare_random_hex-000",
+          "HEL-bare_random_hex-001",
+          "HEL-bare_random_hex-002",
+          "HEL-bare_random_hex-003",
+          "HEL-bare_random_hex-004",
+          "HEL-bare_random_hex-005",
+          "HEL-bare_random_hex-006",
+          "HEL-bare_random_hex-007",
+          "HEL-bare_random_hex-008",
+          "HEL-bare_random_hex-009",
+          "HEL-bare_random_hex-010",
+          "HEL-bare_random_hex-011",
+          "HEL-bare_random_hex-012",
+          "HEL-bare_random_hex-013",
+          "HEL-bare_random_hex-014",
+          "HEL-bare_random_hex-015",
+          "HEL-bare_random_hex-016",
+          "HEL-bare_random_hex-017",
+          "HEL-bare_random_hex-018",
+          "HEL-bare_random_hex-019",
+          "HEL-bare_random_hex-020",
+          "HEL-bare_random_hex-021",
+          "HEL-bare_random_hex-022",
+          "HEL-bare_random_hex-023",
+          "HEL-bare_random_hex-024",
+          "HEL-bare_random_hex-025",
+          "HEL-bare_random_hex-026",
+          "HEL-bare_random_hex-027",
+          "HEL-bare_random_hex-028",
+          "HEL-bare_random_hex-029",
+          "HEL-bare_random_hex-030",
+          "HEL-bare_random_hex-031",
+          "HEL-bare_random_hex-032",
+          "HEL-bare_random_hex-033",
+          "HEL-bare_random_hex-034",
+          "HEL-bare_random_hex-035",
+          "HEL-bare_random_hex-036",
+          "HEL-bare_random_hex-037",
+          "HEL-bare_random_hex-038",
+          "HEL-bare_random_hex-039",
+          "HEL-bare_random_hex-040",
+          "HEL-bare_random_hex-041",
+          "HEL-bare_random_hex-042",
+          "HEL-bare_random_hex-043",
+          "HEL-bare_random_hex-044",
+          "HEL-bare_random_hex-045",
+          "HEL-bare_random_hex-046",
+          "HEL-bare_random_hex-047",
+          "HEL-bare_random_hex-048",
+          "HEL-bare_random_hex-049",
+          "HEL-bare_random_hex-050",
+          "HEL-bare_random_hex-051",
+          "HEL-bare_random_hex-052",
+          "HEL-bare_random_hex-053",
+          "HEL-bare_random_hex-054",
+          "HEL-bare_random_hex-055",
+          "HEL-bare_random_hex-056",
+          "HEL-bare_random_hex-057",
+          "HEL-bare_random_hex-058",
+          "HEL-bare_random_hex-059",
+          "HEL-unseen2_huggingface_token-035",
+          "HEL-unseen2_linear_api_key-024",
+          "HEL-unseen2_shopify_token-000",
+          "HEL-unseen2_shopify_token-001",
+          "HEL-unseen2_shopify_token-003",
+          "HEL-unseen2_shopify_token-004",
+          "HEL-unseen2_shopify_token-005",
+          "HEL-unseen2_shopify_token-006",
+          "HEL-unseen2_shopify_token-007",
+          "HEL-unseen2_shopify_token-008",
+          "HEL-unseen2_shopify_token-009",
+          "HEL-unseen2_shopify_token-010",
+          "HEL-unseen2_shopify_token-011",
+          "HEL-unseen2_shopify_token-012",
+          "HEL-unseen2_shopify_token-013",
+          "HEL-unseen2_shopify_token-015",
+          "HEL-unseen2_shopify_token-016",
+          "HEL-unseen2_shopify_token-017",
+          "HEL-unseen2_shopify_token-018",
+          "HEL-unseen2_shopify_token-019",
+          "HEL-unseen2_shopify_token-020",
+          "HEL-unseen2_shopify_token-021",
+          "HEL-unseen2_shopify_token-022",
+          "HEL-unseen2_shopify_token-023",
+          "HEL-unseen2_shopify_token-024",
+          "HEL-unseen2_shopify_token-025",
+          "HEL-unseen2_shopify_token-026",
+          "HEL-unseen2_shopify_token-027",
+          "HEL-unseen2_shopify_token-028",
+          "HEL-unseen2_shopify_token-029",
+          "HEL-unseen2_shopify_token-030",
+          "HEL-unseen2_shopify_token-031",
+          "HEL-unseen2_shopify_token-032",
+          "HEL-unseen2_shopify_token-033",
+          "HEL-unseen2_shopify_token-034",
+          "HEL-unseen2_shopify_token-035",
+          "HEL-unseen2_shopify_token-036",
+          "HEL-unseen2_shopify_token-037",
+          "HEL-unseen2_shopify_token-038",
+          "HEL-unseen2_shopify_token-039",
+          "HEL-unseen2_shopify_token-040",
+          "HEL-unseen2_shopify_token-041",
+          "HEL-unseen2_shopify_token-042",
+          "HEL-unseen2_shopify_token-043",
+          "HEL-unseen2_shopify_token-045",
+          "HEL-unseen2_shopify_token-046",
+          "HEL-unseen2_shopify_token-047",
+          "HEL-unseen2_shopify_token-048",
+          "HEL-unseen2_shopify_token-049",
+          "HEL-unseen2_shopify_token-050",
+          "HEL-unseen2_shopify_token-051",
+          "HEL-unseen2_shopify_token-052",
+          "HEL-unseen2_shopify_token-053",
+          "HEL-unseen2_shopify_token-054",
+          "HEL-unseen2_shopify_token-055",
+          "HEL-unseen2_shopify_token-056",
+          "HEL-unseen2_shopify_token-057",
+          "HEL-unseen2_shopify_token-059"
+        ],
+        "false_positives": [
+          "HEL-unseen2_bech32_address-000",
+          "HEL-unseen2_bech32_address-001",
+          "HEL-unseen2_bech32_address-002",
+          "HEL-unseen2_bech32_address-003",
+          "HEL-unseen2_bech32_address-004",
+          "HEL-unseen2_bech32_address-005",
+          "HEL-unseen2_bech32_address-006",
+          "HEL-unseen2_bech32_address-007",
+          "HEL-unseen2_bech32_address-008",
+          "HEL-unseen2_bech32_address-009",
+          "HEL-unseen2_bech32_address-011",
+          "HEL-unseen2_bech32_address-012",
+          "HEL-unseen2_bech32_address-013",
+          "HEL-unseen2_bech32_address-014",
+          "HEL-unseen2_bech32_address-015",
+          "HEL-unseen2_bech32_address-016",
+          "HEL-unseen2_bech32_address-017",
+          "HEL-unseen2_bech32_address-018",
+          "HEL-unseen2_bech32_address-019",
+          "HEL-unseen2_bech32_address-020",
+          "HEL-unseen2_bech32_address-021",
+          "HEL-unseen2_bech32_address-022",
+          "HEL-unseen2_bech32_address-023",
+          "HEL-unseen2_bech32_address-024",
+          "HEL-unseen2_bech32_address-025",
+          "HEL-unseen2_bech32_address-026",
+          "HEL-unseen2_bech32_address-027",
+          "HEL-unseen2_bech32_address-028",
+          "HEL-unseen2_bech32_address-029",
+          "HEL-unseen2_bech32_address-030",
+          "HEL-unseen2_bech32_address-031",
+          "HEL-unseen2_bech32_address-032",
+          "HEL-unseen2_bech32_address-033",
+          "HEL-unseen2_bech32_address-034",
+          "HEL-unseen2_bech32_address-035",
+          "HEL-unseen2_bech32_address-036",
+          "HEL-unseen2_bech32_address-037",
+          "HEL-unseen2_bech32_address-038",
+          "HEL-unseen2_bech32_address-039",
+          "HEL-unseen2_bech32_address-040",
+          "HEL-unseen2_bech32_address-041",
+          "HEL-unseen2_bech32_address-042",
+          "HEL-unseen2_bech32_address-043",
+          "HEL-unseen2_bech32_address-044",
+          "HEL-unseen2_bech32_address-045",
+          "HEL-unseen2_bech32_address-046",
+          "HEL-unseen2_bech32_address-047",
+          "HEL-unseen2_bech32_address-048",
+          "HEL-unseen2_bech32_address-050",
+          "HEL-unseen2_bech32_address-051",
+          "HEL-unseen2_bech32_address-052",
+          "HEL-unseen2_bech32_address-053",
+          "HEL-unseen2_bech32_address-054",
+          "HEL-unseen2_bech32_address-055",
+          "HEL-unseen2_bech32_address-056",
+          "HEL-unseen2_bech32_address-057",
+          "HEL-unseen2_bech32_address-058",
+          "HEL-unseen2_bech32_address-059",
+          "HEL-unseen2_drive_file_id-000",
+          "HEL-unseen2_drive_file_id-001",
+          "HEL-unseen2_drive_file_id-002",
+          "HEL-unseen2_drive_file_id-003",
+          "HEL-unseen2_drive_file_id-004",
+          "HEL-unseen2_drive_file_id-005",
+          "HEL-unseen2_drive_file_id-006",
+          "HEL-unseen2_drive_file_id-007",
+          "HEL-unseen2_drive_file_id-008",
+          "HEL-unseen2_drive_file_id-009",
+          "HEL-unseen2_drive_file_id-010",
+          "HEL-unseen2_drive_file_id-011",
+          "HEL-unseen2_drive_file_id-012",
+          "HEL-unseen2_drive_file_id-013",
+          "HEL-unseen2_drive_file_id-014",
+          "HEL-unseen2_drive_file_id-015",
+          "HEL-unseen2_drive_file_id-016",
+          "HEL-unseen2_drive_file_id-017",
+          "HEL-unseen2_drive_file_id-018",
+          "HEL-unseen2_drive_file_id-019",
+          "HEL-unseen2_drive_file_id-020",
+          "HEL-unseen2_drive_file_id-021",
+          "HEL-unseen2_drive_file_id-022",
+          "HEL-unseen2_drive_file_id-023",
+          "HEL-unseen2_drive_file_id-024",
+          "HEL-unseen2_drive_file_id-025",
+          "HEL-unseen2_drive_file_id-026",
+          "HEL-unseen2_drive_file_id-027",
+          "HEL-unseen2_drive_file_id-028",
+          "HEL-unseen2_drive_file_id-029",
+          "HEL-unseen2_drive_file_id-030",
+          "HEL-unseen2_drive_file_id-031",
+          "HEL-unseen2_drive_file_id-032",
+          "HEL-unseen2_drive_file_id-033",
+          "HEL-unseen2_drive_file_id-034",
+          "HEL-unseen2_drive_file_id-035",
+          "HEL-unseen2_drive_file_id-036",
+          "HEL-unseen2_drive_file_id-037",
+          "HEL-unseen2_drive_file_id-039",
+          "HEL-unseen2_drive_file_id-040",
+          "HEL-unseen2_drive_file_id-041",
+          "HEL-unseen2_drive_file_id-042",
+          "HEL-unseen2_drive_file_id-043",
+          "HEL-unseen2_drive_file_id-044",
+          "HEL-unseen2_drive_file_id-045",
+          "HEL-unseen2_drive_file_id-046",
+          "HEL-unseen2_drive_file_id-047",
+          "HEL-unseen2_drive_file_id-048",
+          "HEL-unseen2_drive_file_id-049",
+          "HEL-unseen2_drive_file_id-050",
+          "HEL-unseen2_drive_file_id-051",
+          "HEL-unseen2_drive_file_id-052",
+          "HEL-unseen2_drive_file_id-053",
+          "HEL-unseen2_drive_file_id-054",
+          "HEL-unseen2_drive_file_id-055",
+          "HEL-unseen2_drive_file_id-056",
+          "HEL-unseen2_drive_file_id-057",
+          "HEL-unseen2_drive_file_id-058",
+          "HEL-unseen2_drive_file_id-059"
+        ]
+      }
+    },
+    "heldout2/v3.2.0": {
+      "n": 3000,
+      "positives": 1560,
+      "negatives": 1440,
+      "tp": 1197,
+      "fp": 467,
+      "tn": 973,
+      "fn": 363,
+      "precision": 0.7194,
+      "precision_ci95": [
+        0.6973,
+        0.7404
+      ],
+      "recall": 0.7673,
+      "recall_ci95": [
+        0.7457,
+        0.7876
+      ],
+      "f1": 0.7426,
+      "specificity": 0.6757,
+      "specificity_ci95": [
+        0.6511,
+        0.6994
+      ],
+      "false_positive_rate": 0.3243,
+      "false_negative_rate": 0.2327,
+      "mean_scan_ms": 0.0719,
+      "per_category": {
+        "anthropic_api_key": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "aws_access_key_id": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "aws_arn": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "aws_secret_access_key_ctx": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 58,
+          "recall": 0.9667,
+          "ci95": [
+            0.8864,
+            0.9908
+          ]
+        },
+        "aws_session_token": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "bare_random_base62": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 51,
+          "recall": 0.85,
+          "ci95": [
+            0.7389,
+            0.919
+          ]
+        },
+        "bare_random_base64_40": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "bare_random_hex": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 0,
+          "recall": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "base64_english_text": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 60,
+          "false_positive_rate": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "code_without_secret": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "container_image_digest": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "database_url": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 45,
+          "recall": 0.75,
+          "ci95": [
+            0.6277,
+            0.8422
+          ]
+        },
+        "gcp_service_account_json": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 0,
+          "recall": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "github_classic_token": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "github_fine_grained_pat": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "gitlab_pat": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 7,
+          "recall": 0.1167,
+          "ci95": [
+            0.0577,
+            0.2218
+          ]
+        },
+        "google_api_key": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "keyword_generic_secret": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 54,
+          "recall": 0.9,
+          "ci95": [
+            0.7985,
+            0.9534
+          ]
+        },
+        "keyword_hex_secret": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 39,
+          "recall": 0.65,
+          "ci95": [
+            0.5236,
+            0.7583
+          ]
+        },
+        "labelled_request_id": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 56,
+          "false_positive_rate": 0.9333,
+          "ci95": [
+            0.8407,
+            0.9738
+          ]
+        },
+        "long_identifier": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "md5_digest": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "obfuscated_provider_token": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 47,
+          "recall": 0.7833,
+          "ci95": [
+            0.6638,
+            0.8688
+          ]
+        },
+        "openai_api_key": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "password_assignment": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 0,
+          "recall": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "pem_private_key": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "pem_public_material": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 27,
+          "false_positive_rate": 0.45,
+          "ci95": [
+            0.3309,
+            0.5751
+          ]
+        },
+        "placeholder_assignment": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "placeholder_database_url": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 60,
+          "false_positive_rate": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "prose": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "sha1_git_commit": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "sha256_hex_digest": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "slack_bot_token": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "slack_webhook": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "sri_integrity_hash": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 60,
+          "false_positive_rate": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "ssh_public_key": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 60,
+          "false_positive_rate": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "stripe_publishable_key": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 58,
+          "false_positive_rate": 0.9667,
+          "ci95": [
+            0.8864,
+            0.9908
+          ]
+        },
+        "stripe_secret_key": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "ulid": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "unseen2_azure_storage_conn": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "unseen2_bech32_address": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 26,
+          "false_positive_rate": 0.4333,
+          "ci95": [
+            0.3157,
+            0.559
+          ]
+        },
+        "unseen2_docker_container_id": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "unseen2_drive_file_id": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 60,
+          "false_positive_rate": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "unseen2_huggingface_token": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 56,
+          "recall": 0.9333,
+          "ci95": [
+            0.8407,
+            0.9738
+          ]
+        },
+        "unseen2_linear_api_key": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 60,
+          "recall": 1.0,
+          "ci95": [
+            0.9398,
+            1.0
+          ]
+        },
+        "unseen2_semver_build_metadata": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "unseen2_shopify_token": {
+          "label": "credential",
+          "n": 60,
+          "flagged": 0,
+          "recall": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "url_with_path": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "uuid": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        },
+        "version_and_numbers": {
+          "label": "benign",
+          "n": 60,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0602
+          ]
+        }
+      },
+      "errors": {
+        "false_negatives": [
+          "HEL-aws_secret_access_key_ctx-019",
+          "HEL-aws_secret_access_key_ctx-049",
+          "HEL-bare_random_base62-001",
+          "HEL-bare_random_base62-006",
+          "HEL-bare_random_base62-016",
+          "HEL-bare_random_base62-026",
+          "HEL-bare_random_base62-030",
+          "HEL-bare_random_base62-031",
+          "HEL-bare_random_base62-034",
+          "HEL-bare_random_base62-044",
+          "HEL-bare_random_base62-045",
+          "HEL-bare_random_hex-000",
+          "HEL-bare_random_hex-001",
+          "HEL-bare_random_hex-002",
+          "HEL-bare_random_hex-003",
+          "HEL-bare_random_hex-004",
+          "HEL-bare_random_hex-005",
+          "HEL-bare_random_hex-006",
+          "HEL-bare_random_hex-007",
+          "HEL-bare_random_hex-008",
+          "HEL-bare_random_hex-009",
+          "HEL-bare_random_hex-010",
+          "HEL-bare_random_hex-011",
+          "HEL-bare_random_hex-012",
+          "HEL-bare_random_hex-013",
+          "HEL-bare_random_hex-014",
+          "HEL-bare_random_hex-015",
+          "HEL-bare_random_hex-016",
+          "HEL-bare_random_hex-017",
+          "HEL-bare_random_hex-018",
+          "HEL-bare_random_hex-019",
+          "HEL-bare_random_hex-020",
+          "HEL-bare_random_hex-021",
+          "HEL-bare_random_hex-022",
+          "HEL-bare_random_hex-023",
+          "HEL-bare_random_hex-024",
+          "HEL-bare_random_hex-025",
+          "HEL-bare_random_hex-026",
+          "HEL-bare_random_hex-027",
+          "HEL-bare_random_hex-028",
+          "HEL-bare_random_hex-029",
+          "HEL-bare_random_hex-030",
+          "HEL-bare_random_hex-031",
+          "HEL-bare_random_hex-032",
+          "HEL-bare_random_hex-033",
+          "HEL-bare_random_hex-034",
+          "HEL-bare_random_hex-035",
+          "HEL-bare_random_hex-036",
+          "HEL-bare_random_hex-037",
+          "HEL-bare_random_hex-038",
+          "HEL-bare_random_hex-039",
+          "HEL-bare_random_hex-040",
+          "HEL-bare_random_hex-041",
+          "HEL-bare_random_hex-042",
+          "HEL-bare_random_hex-043",
+          "HEL-bare_random_hex-044",
+          "HEL-bare_random_hex-045",
+          "HEL-bare_random_hex-046",
+          "HEL-bare_random_hex-047",
+          "HEL-bare_random_hex-048",
+          "HEL-bare_random_hex-049",
+          "HEL-bare_random_hex-050",
+          "HEL-bare_random_hex-051",
+          "HEL-bare_random_hex-052",
+          "HEL-bare_random_hex-053",
+          "HEL-bare_random_hex-054",
+          "HEL-bare_random_hex-055",
+          "HEL-bare_random_hex-056",
+          "HEL-bare_random_hex-057",
+          "HEL-bare_random_hex-058",
+          "HEL-bare_random_hex-059",
+          "HEL-database_url-003",
+          "HEL-database_url-009",
+          "HEL-database_url-010",
+          "HEL-database_url-014",
+          "HEL-database_url-015",
+          "HEL-database_url-016",
+          "HEL-database_url-020",
+          "HEL-database_url-023",
+          "HEL-database_url-033",
+          "HEL-database_url-041",
+          "HEL-database_url-043",
+          "HEL-database_url-050",
+          "HEL-database_url-053",
+          "HEL-database_url-057",
+          "HEL-database_url-059",
+          "HEL-gcp_service_account_json-000",
+          "HEL-gcp_service_account_json-001",
+          "HEL-gcp_service_account_json-002",
+          "HEL-gcp_service_account_json-003",
+          "HEL-gcp_service_account_json-004",
+          "HEL-gcp_service_account_json-005",
+          "HEL-gcp_service_account_json-006",
+          "HEL-gcp_service_account_json-007",
+          "HEL-gcp_service_account_json-008",
+          "HEL-gcp_service_account_json-009",
+          "HEL-gcp_service_account_json-010",
+          "HEL-gcp_service_account_json-011",
+          "HEL-gcp_service_account_json-012",
+          "HEL-gcp_service_account_json-013",
+          "HEL-gcp_service_account_json-014",
+          "HEL-gcp_service_account_json-015",
+          "HEL-gcp_service_account_json-016",
+          "HEL-gcp_service_account_json-017",
+          "HEL-gcp_service_account_json-018",
+          "HEL-gcp_service_account_json-019",
+          "HEL-gcp_service_account_json-020",
+          "HEL-gcp_service_account_json-021",
+          "HEL-gcp_service_account_json-022",
+          "HEL-gcp_service_account_json-023",
+          "HEL-gcp_service_account_json-024",
+          "HEL-gcp_service_account_json-025",
+          "HEL-gcp_service_account_json-026",
+          "HEL-gcp_service_account_json-027",
+          "HEL-gcp_service_account_json-028",
+          "HEL-gcp_service_account_json-029",
+          "HEL-gcp_service_account_json-030",
+          "HEL-gcp_service_account_json-031",
+          "HEL-gcp_service_account_json-032",
+          "HEL-gcp_service_account_json-033",
+          "HEL-gcp_service_account_json-034",
+          "HEL-gcp_service_account_json-035",
+          "HEL-gcp_service_account_json-036",
+          "HEL-gcp_service_account_json-037",
+          "HEL-gcp_service_account_json-038",
+          "HEL-gcp_service_account_json-039",
+          "HEL-gcp_service_account_json-040",
+          "HEL-gcp_service_account_json-041",
+          "HEL-gcp_service_account_json-042",
+          "HEL-gcp_service_account_json-043",
+          "HEL-gcp_service_account_json-044",
+          "HEL-gcp_service_account_json-045",
+          "HEL-gcp_service_account_json-046",
+          "HEL-gcp_service_account_json-047",
+          "HEL-gcp_service_account_json-048",
+          "HEL-gcp_service_account_json-049",
+          "HEL-gcp_service_account_json-050",
+          "HEL-gcp_service_account_json-051",
+          "HEL-gcp_service_account_json-052",
+          "HEL-gcp_service_account_json-053",
+          "HEL-gcp_service_account_json-054",
+          "HEL-gcp_service_account_json-055",
+          "HEL-gcp_service_account_json-056",
+          "HEL-gcp_service_account_json-057",
+          "HEL-gcp_service_account_json-058",
+          "HEL-gcp_service_account_json-059",
+          "HEL-gitlab_pat-000",
+          "HEL-gitlab_pat-001",
+          "HEL-gitlab_pat-002",
+          "HEL-gitlab_pat-003",
+          "HEL-gitlab_pat-004",
+          "HEL-gitlab_pat-005",
+          "HEL-gitlab_pat-006",
+          "HEL-gitlab_pat-007",
+          "HEL-gitlab_pat-008",
+          "HEL-gitlab_pat-009",
+          "HEL-gitlab_pat-011",
+          "HEL-gitlab_pat-012",
+          "HEL-gitlab_pat-013",
+          "HEL-gitlab_pat-014",
+          "HEL-gitlab_pat-015",
+          "HEL-gitlab_pat-016",
+          "HEL-gitlab_pat-017",
+          "HEL-gitlab_pat-018",
+          "HEL-gitlab_pat-020",
+          "HEL-gitlab_pat-021",
+          "HEL-gitlab_pat-022",
+          "HEL-gitlab_pat-023",
+          "HEL-gitlab_pat-025",
+          "HEL-gitlab_pat-026",
+          "HEL-gitlab_pat-028",
+          "HEL-gitlab_pat-029",
+          "HEL-gitlab_pat-030",
+          "HEL-gitlab_pat-031",
+          "HEL-gitlab_pat-032",
+          "HEL-gitlab_pat-033",
+          "HEL-gitlab_pat-034",
+          "HEL-gitlab_pat-035",
+          "HEL-gitlab_pat-036",
+          "HEL-gitlab_pat-037",
+          "HEL-gitlab_pat-038",
+          "HEL-gitlab_pat-039",
+          "HEL-gitlab_pat-040",
+          "HEL-gitlab_pat-041",
+          "HEL-gitlab_pat-042",
+          "HEL-gitlab_pat-043",
+          "HEL-gitlab_pat-044",
+          "HEL-gitlab_pat-046",
+          "HEL-gitlab_pat-048",
+          "HEL-gitlab_pat-049",
+          "HEL-gitlab_pat-050",
+          "HEL-gitlab_pat-051",
+          "HEL-gitlab_pat-052",
+          "HEL-gitlab_pat-053",
+          "HEL-gitlab_pat-054",
+          "HEL-gitlab_pat-056",
+          "HEL-gitlab_pat-057",
+          "HEL-gitlab_pat-058",
+          "HEL-gitlab_pat-059",
+          "HEL-keyword_generic_secret-000"
+        ],
+        "false_positives": [
+          "HEL-base64_english_text-000",
+          "HEL-base64_english_text-001",
+          "HEL-base64_english_text-002",
+          "HEL-base64_english_text-003",
+          "HEL-base64_english_text-004",
+          "HEL-base64_english_text-005",
+          "HEL-base64_english_text-006",
+          "HEL-base64_english_text-007",
+          "HEL-base64_english_text-008",
+          "HEL-base64_english_text-009",
+          "HEL-base64_english_text-010",
+          "HEL-base64_english_text-011",
+          "HEL-base64_english_text-012",
+          "HEL-base64_english_text-013",
+          "HEL-base64_english_text-014",
+          "HEL-base64_english_text-015",
+          "HEL-base64_english_text-016",
+          "HEL-base64_english_text-017",
+          "HEL-base64_english_text-018",
+          "HEL-base64_english_text-019",
+          "HEL-base64_english_text-020",
+          "HEL-base64_english_text-021",
+          "HEL-base64_english_text-022",
+          "HEL-base64_english_text-023",
+          "HEL-base64_english_text-024",
+          "HEL-base64_english_text-025",
+          "HEL-base64_english_text-026",
+          "HEL-base64_english_text-027",
+          "HEL-base64_english_text-028",
+          "HEL-base64_english_text-029",
+          "HEL-base64_english_text-030",
+          "HEL-base64_english_text-031",
+          "HEL-base64_english_text-032",
+          "HEL-base64_english_text-033",
+          "HEL-base64_english_text-034",
+          "HEL-base64_english_text-035",
+          "HEL-base64_english_text-036",
+          "HEL-base64_english_text-037",
+          "HEL-base64_english_text-038",
+          "HEL-base64_english_text-039",
+          "HEL-base64_english_text-040",
+          "HEL-base64_english_text-041",
+          "HEL-base64_english_text-042",
+          "HEL-base64_english_text-043",
+          "HEL-base64_english_text-044",
+          "HEL-base64_english_text-045",
+          "HEL-base64_english_text-046",
+          "HEL-base64_english_text-047",
+          "HEL-base64_english_text-048",
+          "HEL-base64_english_text-049",
+          "HEL-base64_english_text-050",
+          "HEL-base64_english_text-051",
+          "HEL-base64_english_text-052",
+          "HEL-base64_english_text-053",
+          "HEL-base64_english_text-054",
+          "HEL-base64_english_text-055",
+          "HEL-base64_english_text-056",
+          "HEL-base64_english_text-057",
+          "HEL-base64_english_text-058",
+          "HEL-base64_english_text-059",
+          "HEL-labelled_request_id-000",
+          "HEL-labelled_request_id-003",
+          "HEL-labelled_request_id-004",
+          "HEL-labelled_request_id-005",
+          "HEL-labelled_request_id-006",
+          "HEL-labelled_request_id-007",
+          "HEL-labelled_request_id-008",
+          "HEL-labelled_request_id-009",
+          "HEL-labelled_request_id-010",
+          "HEL-labelled_request_id-011",
+          "HEL-labelled_request_id-012",
+          "HEL-labelled_request_id-013",
+          "HEL-labelled_request_id-014",
+          "HEL-labelled_request_id-015",
+          "HEL-labelled_request_id-016",
+          "HEL-labelled_request_id-017",
+          "HEL-labelled_request_id-018",
+          "HEL-labelled_request_id-019",
+          "HEL-labelled_request_id-020",
+          "HEL-labelled_request_id-021",
+          "HEL-labelled_request_id-022",
+          "HEL-labelled_request_id-023",
+          "HEL-labelled_request_id-024",
+          "HEL-labelled_request_id-025",
+          "HEL-labelled_request_id-026",
+          "HEL-labelled_request_id-027",
+          "HEL-labelled_request_id-028",
+          "HEL-labelled_request_id-029",
+          "HEL-labelled_request_id-030",
+          "HEL-labelled_request_id-031",
+          "HEL-labelled_request_id-032",
+          "HEL-labelled_request_id-033",
+          "HEL-labelled_request_id-034",
+          "HEL-labelled_request_id-035",
+          "HEL-labelled_request_id-037",
+          "HEL-labelled_request_id-038",
+          "HEL-labelled_request_id-039",
+          "HEL-labelled_request_id-040",
+          "HEL-labelled_request_id-041",
+          "HEL-labelled_request_id-042",
+          "HEL-labelled_request_id-044",
+          "HEL-labelled_request_id-045",
+          "HEL-labelled_request_id-046",
+          "HEL-labelled_request_id-047",
+          "HEL-labelled_request_id-048",
+          "HEL-labelled_request_id-049",
+          "HEL-labelled_request_id-050",
+          "HEL-labelled_request_id-051",
+          "HEL-labelled_request_id-052",
+          "HEL-labelled_request_id-053",
+          "HEL-labelled_request_id-054",
+          "HEL-labelled_request_id-055",
+          "HEL-labelled_request_id-056",
+          "HEL-labelled_request_id-057",
+          "HEL-labelled_request_id-058",
+          "HEL-labelled_request_id-059",
+          "HEL-pem_public_material-005",
+          "HEL-pem_public_material-006",
+          "HEL-pem_public_material-007",
+          "HEL-pem_public_material-010",
+          "HEL-pem_public_material-013",
+          "HEL-pem_public_material-018",
+          "HEL-pem_public_material-020",
+          "HEL-pem_public_material-021",
+          "HEL-pem_public_material-024",
+          "HEL-pem_public_material-025",
+          "HEL-pem_public_material-029",
+          "HEL-pem_public_material-030",
+          "HEL-pem_public_material-032",
+          "HEL-pem_public_material-033",
+          "HEL-pem_public_material-034",
+          "HEL-pem_public_material-040",
+          "HEL-pem_public_material-041",
+          "HEL-pem_public_material-042",
+          "HEL-pem_public_material-043",
+          "HEL-pem_public_material-044",
+          "HEL-pem_public_material-045",
+          "HEL-pem_public_material-046",
+          "HEL-pem_public_material-048",
+          "HEL-pem_public_material-049",
+          "HEL-pem_public_material-052",
+          "HEL-pem_public_material-054",
+          "HEL-pem_public_material-055",
+          "HEL-placeholder_database_url-000",
+          "HEL-placeholder_database_url-001",
+          "HEL-placeholder_database_url-002",
+          "HEL-placeholder_database_url-003",
+          "HEL-placeholder_database_url-004",
+          "HEL-placeholder_database_url-005",
+          "HEL-placeholder_database_url-006",
+          "HEL-placeholder_database_url-007",
+          "HEL-placeholder_database_url-008",
+          "HEL-placeholder_database_url-009",
+          "HEL-placeholder_database_url-010",
+          "HEL-placeholder_database_url-011",
+          "HEL-placeholder_database_url-012",
+          "HEL-placeholder_database_url-013",
+          "HEL-placeholder_database_url-014",
+          "HEL-placeholder_database_url-015",
+          "HEL-placeholder_database_url-016",
+          "HEL-placeholder_database_url-017",
+          "HEL-placeholder_database_url-018",
+          "HEL-placeholder_database_url-019",
+          "HEL-placeholder_database_url-020",
+          "HEL-placeholder_database_url-021",
+          "HEL-placeholder_database_url-022",
+          "HEL-placeholder_database_url-023",
+          "HEL-placeholder_database_url-024",
+          "HEL-placeholder_database_url-025",
+          "HEL-placeholder_database_url-026",
+          "HEL-placeholder_database_url-027",
+          "HEL-placeholder_database_url-028",
+          "HEL-placeholder_database_url-029",
+          "HEL-placeholder_database_url-030",
+          "HEL-placeholder_database_url-031",
+          "HEL-placeholder_database_url-032",
+          "HEL-placeholder_database_url-033",
+          "HEL-placeholder_database_url-034",
+          "HEL-placeholder_database_url-035",
+          "HEL-placeholder_database_url-036",
+          "HEL-placeholder_database_url-037",
+          "HEL-placeholder_database_url-038",
+          "HEL-placeholder_database_url-039",
+          "HEL-placeholder_database_url-040",
+          "HEL-placeholder_database_url-041",
+          "HEL-placeholder_database_url-042",
+          "HEL-placeholder_database_url-043",
+          "HEL-placeholder_database_url-044",
+          "HEL-placeholder_database_url-045",
+          "HEL-placeholder_database_url-046",
+          "HEL-placeholder_database_url-047",
+          "HEL-placeholder_database_url-048",
+          "HEL-placeholder_database_url-049",
+          "HEL-placeholder_database_url-050",
+          "HEL-placeholder_database_url-051",
+          "HEL-placeholder_database_url-052",
+          "HEL-placeholder_database_url-053",
+          "HEL-placeholder_database_url-054",
+          "HEL-placeholder_database_url-055",
+          "HEL-placeholder_database_url-056"
+        ]
+      }
+    },
+    "legacy/v4.0.0": {
+      "n": 117,
+      "positives": 55,
+      "negatives": 62,
+      "tp": 55,
+      "fp": 0,
+      "tn": 62,
+      "fn": 0,
+      "precision": 1.0,
+      "precision_ci95": [
+        0.9347,
+        1.0
+      ],
+      "recall": 1.0,
+      "recall_ci95": [
+        0.9347,
+        1.0
+      ],
+      "f1": 1.0,
+      "specificity": 1.0,
+      "specificity_ci95": [
+        0.9417,
+        1.0
+      ],
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "mean_scan_ms": 0.0524,
+      "per_category": {
+        "api_key_assignment": {
+          "label": "credential",
+          "n": 7,
+          "flagged": 7,
+          "recall": 1.0,
+          "ci95": [
+            0.6457,
+            1.0
+          ]
+        },
+        "aws_credential": {
+          "label": "credential",
+          "n": 12,
+          "flagged": 12,
+          "recall": 1.0,
+          "ci95": [
+            0.7575,
+            1.0
+          ]
+        },
+        "benign_prose": {
+          "label": "benign",
+          "n": 27,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1246
+          ]
+        },
+        "benign_technical": {
+          "label": "benign",
+          "n": 24,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.138
+          ]
+        },
+        "database_credential": {
+          "label": "credential",
+          "n": 7,
+          "flagged": 7,
+          "recall": 1.0,
+          "ci95": [
+            0.6457,
+            1.0
+          ]
+        },
+        "difficult_borderline": {
+          "label": "benign",
+          "n": 11,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.2588
+          ]
+        },
+        "github_token": {
+          "label": "credential",
+          "n": 7,
+          "flagged": 7,
+          "recall": 1.0,
+          "ci95": [
+            0.6457,
+            1.0
+          ]
+        },
+        "google_api_key": {
+          "label": "credential",
+          "n": 5,
+          "flagged": 5,
+          "recall": 1.0,
+          "ci95": [
+            0.5655,
+            1.0
+          ]
+        },
+        "obfuscated_credential": {
+          "label": "credential",
+          "n": 3,
+          "flagged": 3,
+          "recall": 1.0,
+          "ci95": [
+            0.4385,
+            1.0
+          ]
+        },
+        "obfuscated_threat": {
+          "label": "credential",
+          "n": 1,
+          "flagged": 1,
+          "recall": 1.0,
+          "ci95": [
+            0.2065,
+            1.0
+          ]
+        },
+        "password_disclosure": {
+          "label": "credential",
+          "n": 1,
+          "flagged": 1,
+          "recall": 1.0,
+          "ci95": [
+            0.2065,
+            1.0
+          ]
+        },
+        "private_key": {
+          "label": "credential",
+          "n": 6,
+          "flagged": 6,
+          "recall": 1.0,
+          "ci95": [
+            0.6097,
+            1.0
+          ]
+        },
+        "slack_token": {
+          "label": "credential",
+          "n": 6,
+          "flagged": 6,
+          "recall": 1.0,
+          "ci95": [
+            0.6097,
+            1.0
+          ]
+        }
+      },
+      "errors": {
+        "false_negatives": [],
+        "false_positives": []
+      }
+    },
+    "legacy/v3.2.0": {
+      "n": 117,
+      "positives": 55,
+      "negatives": 62,
+      "tp": 54,
+      "fp": 0,
+      "tn": 62,
+      "fn": 1,
+      "precision": 1.0,
+      "precision_ci95": [
+        0.9336,
+        1.0
+      ],
+      "recall": 0.9818,
+      "recall_ci95": [
+        0.9039,
+        0.9968
+      ],
+      "f1": 0.9908,
+      "specificity": 1.0,
+      "specificity_ci95": [
+        0.9417,
+        1.0
+      ],
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0182,
+      "mean_scan_ms": 0.0311,
+      "per_category": {
+        "api_key_assignment": {
+          "label": "credential",
+          "n": 7,
+          "flagged": 7,
+          "recall": 1.0,
+          "ci95": [
+            0.6457,
+            1.0
+          ]
+        },
+        "aws_credential": {
+          "label": "credential",
+          "n": 12,
+          "flagged": 12,
+          "recall": 1.0,
+          "ci95": [
+            0.7575,
+            1.0
+          ]
+        },
+        "benign_prose": {
+          "label": "benign",
+          "n": 27,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1246
+          ]
+        },
+        "benign_technical": {
+          "label": "benign",
+          "n": 24,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.138
+          ]
+        },
+        "database_credential": {
+          "label": "credential",
+          "n": 7,
+          "flagged": 7,
+          "recall": 1.0,
+          "ci95": [
+            0.6457,
+            1.0
+          ]
+        },
+        "difficult_borderline": {
+          "label": "benign",
+          "n": 11,
+          "flagged": 0,
+          "false_positive_rate": 0.0,
+          "ci95": [
+            0.0,
+            0.2588
+          ]
+        },
+        "github_token": {
+          "label": "credential",
+          "n": 7,
+          "flagged": 7,
+          "recall": 1.0,
+          "ci95": [
+            0.6457,
+            1.0
+          ]
+        },
+        "google_api_key": {
+          "label": "credential",
+          "n": 5,
+          "flagged": 5,
+          "recall": 1.0,
+          "ci95": [
+            0.5655,
+            1.0
+          ]
+        },
+        "obfuscated_credential": {
+          "label": "credential",
+          "n": 3,
+          "flagged": 3,
+          "recall": 1.0,
+          "ci95": [
+            0.4385,
+            1.0
+          ]
+        },
+        "obfuscated_threat": {
+          "label": "credential",
+          "n": 1,
+          "flagged": 1,
+          "recall": 1.0,
+          "ci95": [
+            0.2065,
+            1.0
+          ]
+        },
+        "password_disclosure": {
+          "label": "credential",
+          "n": 1,
+          "flagged": 0,
+          "recall": 0.0,
+          "ci95": [
+            0.0,
+            0.7935
+          ]
+        },
+        "private_key": {
+          "label": "credential",
+          "n": 6,
+          "flagged": 6,
+          "recall": 1.0,
+          "ci95": [
+            0.6097,
+            1.0
+          ]
+        },
+        "slack_token": {
+          "label": "credential",
+          "n": 6,
+          "flagged": 6,
+          "recall": 1.0,
+          "ci95": [
+            0.6097,
+            1.0
+          ]
+        }
+      },
+      "errors": {
+        "false_negatives": [
+          "CAL_BORD_10"
+        ],
+        "false_positives": []
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# Least privilege for the GITHUB_TOKEN; jobs that need more request it explicitly.
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  static-analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: python -m pip install -e ".[dev]"
+      - name: Ruff lint
+        run: ruff check src tests benchmarks scripts infra
+      - name: Ruff format (package and main test suites)
+        run: ruff format --check src/shadow_ai_gateway tests/conftest.py tests/upstreams.py tests/test_components.py tests/test_gateway_integration.py tests/test_ssrf_transport_tls.py tests/test_streaming_invariant.py
+      - name: Mypy (strict)
+        run: mypy
+      - name: Bandit (SAST)
+        run: bandit -q -r src -c pyproject.toml
+
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13", "3.14"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - run: python -m pip install -e ".[dev]"
+      - name: Test suite (live provider tests are skipped without explicit opt-in)
+        run: pytest -q --cov --cov-report=term --cov-fail-under=85
+
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install pip-audit -e .
+      - name: Dependency vulnerabilities (hash-pinned runtime lock)
+        run: pip-audit --strict --require-hashes -r requirements.lock
+      - name: Secret scan (gateway's own pattern detectors over tracked files)
+        run: python scripts/scan_repo_secrets.py
+      - name: Kubernetes security lint
+        run: python infra/lint_k8s.py infra
+
+  evaluation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e ".[dev]"
+      - name: Corpus is reproducible
+        run: python -m benchmarks.corpus
+      - name: DLP benchmark (held-out-2)
+        run: python -m benchmarks.run_dlp_benchmark --splits heldout2
+      - name: Streaming leak evaluation (reduced trials)
+        run: python -m benchmarks.streaming_leak_eval --trials 50
+      - name: Attack/defense simulation
+        run: python scripts/simulate_attack_defense.py
+
+  container:
+    runs-on: ubuntu-latest
+    needs: [tests]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lint Dockerfile
+        uses: hadolint/hadolint-action@v3.1.0
+        with:
+          dockerfile: Dockerfile
+      - name: Build image
+        run: docker build -t shadow-ai-gateway:ci .
+      - name: Smoke test (read-only root fs, all capabilities dropped, non-root)
+        run: |
+          docker run -d --name gw --read-only --cap-drop ALL --security-opt no-new-privileges \
+            -e GATEWAY_AUTH_MODE=disabled -p 8080:8080 shadow-ai-gateway:ci
+          for i in $(seq 1 30); do curl -fsS http://127.0.0.1:8080/health && break; sleep 1; done
+          test "$(docker exec gw id -u)" = "10001"
+          docker logs gw
+          docker rm -f gw
+      - name: Container vulnerability scan
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          image-ref: shadow-ai-gateway:ci
+          severity: CRITICAL,HIGH
+          ignore-unfixed: true
+          exit-code: "1"
+      - name: Kubernetes manifest schema validation
+        run: |
+          docker run --rm -v "$PWD/infra:/infra:ro" ghcr.io/yannh/kubeconform:v0.6.7 \
+            -strict -summary /infra/k8s-gateway.yaml /infra/k8s-ai-workload.yaml /infra/k8s-shadow-ai-netpol.yaml
