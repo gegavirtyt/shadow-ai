@@ -9,7 +9,7 @@
 #   FROM python:3.12-slim-bookworm@sha256:<digest>
 
 
-FROM python:3.12-slim-bookworm AS builder
+FROM python:3.15-slim-bookworm AS builder
 ENV PIP_NO_CACHE_DIR=1 \
     PIP_DISABLE_PIP_VERSION_CHECK=1
 WORKDIR /build
@@ -17,7 +17,7 @@ COPY requirements.lock .
 RUN python -m venv /opt/venv \
     && /opt/venv/bin/pip install --require-hashes --no-deps -r requirements.lock
 
-FROM python:3.12-slim-bookworm AS runtime
+FROM python:3.15-slim-bookworm AS runtime
 RUN groupadd --system --gid 10001 gateway \
     && useradd --system --uid 10001 --gid gateway --no-create-home --home-dir /nonexistent --shell /usr/sbin/nologin gateway
 COPY --from=builder /opt/venv /opt/venv
